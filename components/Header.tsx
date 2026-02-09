@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
 
 export default function Header() {
@@ -12,8 +13,15 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
+            <Image
+              src="/logo.ico"
+              alt="NJoy Travel & Tours Logo"
+              width={40}
+              height={40}
+              className="object-contain"
+            />
             <div className="text-2xl font-bold text-blue-600">
-              TechHenu
+              NJoy
             </div>
             <span className="text-gray-700">Travel & Tours</span>
           </Link>
