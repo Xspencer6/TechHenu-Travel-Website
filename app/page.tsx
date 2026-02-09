@@ -3,6 +3,7 @@ import PopularDestinations from "@/components/PopularDestinations"
 import TravelVlogs from "@/components/TravelVlogs"
 import CustomerReviews from "@/components/CustomerReviews"
 import Footer from "@/components/Footer"
+import WhyChooseUs from "@/components/WhyChooseUs";
 
 export default function Home() {
   return (
@@ -37,6 +38,7 @@ export default function Home() {
       </section>
 
       <main className="flex-grow">
+        <WhyChooseUs />
         <PopularDestinations />
         <TravelVlogs />
         <CustomerReviews />
