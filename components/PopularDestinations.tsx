@@ -13,45 +13,45 @@ interface Destination {
 const destinations: Destination[] = [
   {
     id: "1",
-    name: "Bali, Indonesia",
+    name: "Baguio",
     image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&h=600&fit=crop",
-    description: "Tropical paradise with stunning beaches and rich culture",
+    description: "Cool mountain escape known for pine forests, scenic views, and a relaxed city vibe.",
     tourCount: 12
   },
   {
     id: "2",
-    name: "Santorini, Greece",
+    name: "Sagada",
     image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&h=600&fit=crop",
-    description: "Breathtaking sunsets and white-washed buildings",
+    description: "Quiet highland town offering misty mountains, ancient traditions, and soulful adventure.",
     tourCount: 8
   },
   {
     id: "3",
-    name: "Tokyo, Japan",
+    name: "Ilocos Norte",
     image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&h=600&fit=crop",
-    description: "Modern metropolis meets traditional culture",
+    description: "Land of wind-swept coasts, historic landmarks, and dramatic northern landscapes.",
     tourCount: 15
   },
   {
     id: "4",
-    name: "Paris, France",
+    name: "Ilocos Sur",
     image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=600&fit=crop",
-    description: "The City of Light and romance",
+    description: "Cultural heartland blending Spanish-era heritage, artisan crafts, and local flavors.",
     tourCount: 10
   },
   {
     id: "5",
-    name: "Maldives",
-    image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&h=600&fit=crop",
-    description: "Crystal-clear waters and luxury resorts",
-    tourCount: 6
+    name: "Baler",
+    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=600&fit=crop",
+    description: "Laid-back surf town where golden beaches meet lush mountains and rich history.",
+    tourCount: 10
   },
   {
     id: "6",
-    name: "New York, USA",
-    image: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&h=600&fit=crop",
-    description: "The city that never sleeps",
-    tourCount: 9
+    name: "Vigan",
+    image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&h=600&fit=crop",
+    description: "Timeless heritage city with cobblestone streets, colonial charm, and living history.",
+    tourCount: 6
   },
 ]
 

@@ -35,7 +35,7 @@ export default function Header() {
               Destinations
             </Link>
             <Link href="/tours" className="text-gray-700 hover:text-blue-600 transition-colors">
-              Tours
+              Travel Packages
             </Link>
             <Link href="/vlogs" className="text-gray-700 hover:text-blue-600 transition-colors">
               Travel Vlogs
@@ -97,7 +97,7 @@ export default function Header() {
               className="block text-gray-700 hover:text-blue-600 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Tours
+              Travel Packages
             </Link>
             <Link 
               href="/vlogs" 

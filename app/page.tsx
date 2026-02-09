@@ -11,7 +11,7 @@ export default function Home() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+      <section className="relative h-[600px] flex items-center justify-center bg-gradient-to-r bg- text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
