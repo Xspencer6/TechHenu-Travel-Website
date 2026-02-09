@@ -20,7 +20,7 @@ export default function Header() {
               height={40}
               className="object-contain"
             />
-            <div className="text-2xl font-bold text-blue-600">
+            <div className="text-2xl font-bold text-orange-500">
               NJoy
             </div>
             <span className="text-gray-700">Travel & Tours</span>
@@ -28,19 +28,19 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link href="/" className="text-gray-700 hover:text-orange-500 transition-colors">
               Home
             </Link>
-            <Link href="/destinations" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link href="/destinations" className="text-gray-700 hover:text-orange-500 transition-colors">
               Destinations
             </Link>
-            <Link href="/tours" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link href="/tours" className="text-gray-700 hover:text-orange-500 transition-colors">
               Travel Packages
             </Link>
-            <Link href="/vlogs" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link href="/vlogs" className="text-gray-700 hover:text-orange-500 transition-colors">
               Travel Vlogs
             </Link>
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link href="/about" className="text-gray-700 hover:text-orange-500 transition-colors">
               About
             </Link>
             <Link 
