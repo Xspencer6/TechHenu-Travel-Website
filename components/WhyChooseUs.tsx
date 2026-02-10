@@ -3,6 +3,7 @@ import diamond from "@/app/assets/icons/diamond.svg.svg";
 import ticket from "@/app/assets/icons/ticket.svg.svg";
 import balloon from "@/app/assets/icons/hot-air-balloon.svg.svg"
 
+// No need for firebase, static elements
 const WhyChooseUs = () => {
     const provisions = [
         {

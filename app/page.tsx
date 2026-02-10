@@ -4,13 +4,15 @@ import TravelVlogs from "@/components/TravelVlogs"
 import CustomerReviews from "@/components/CustomerReviews"
 import Footer from "@/components/Footer"
 import WhyChooseUs from "@/components/WhyChooseUs";
+import TravelPackages from "@/components/TravelPackages";
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center bg-[url('assets/images/beach-hero.png')] bg-center bg-cover text-white">
+      <section className="relative h-[600px] flex items-center justify-center bg-[url('assets/images/roadtravel-hero.png')] bg-center bg-cover text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -39,6 +41,7 @@ export default function Home() {
       <main className="flex-grow">
         <WhyChooseUs />
         <PopularDestinations />
+        <TravelPackages />
         <TravelVlogs />
         <CustomerReviews />
       </main>
