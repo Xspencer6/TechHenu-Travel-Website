@@ -2,10 +2,65 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+
+const SECTION_IDS = ["home", "destinations", "packages", "vlogs", "about"] as const
+
+type SectionId = (typeof SECTION_IDS)[number]
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState<SectionId>("home")
+
+  useEffect(() => {
+    if (typeof window === "undefined") return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.target.id) {
+            const id = entry.target.id as SectionId
+            if (SECTION_IDS.includes(id)) {
+              setActiveSection(id)
+            }
+          }
+        })
+      },
+      {
+        threshold: 0.5,
+        rootMargin: "-80px 0px -40% 0px",
+      }
+    )
+
+    SECTION_IDS.forEach((id) => {
+      const el = document.getElementById(id)
+      if (el) observer.observe(el)
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
+  const scrollToSection = (id: SectionId) => {
+    const el = document.getElementById(id)
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+    setIsMenuOpen(false)
+  }
+
+  const desktopLinkClass = (id: SectionId) =>
+    [
+      "pb-1 border-b-2 transition-colors",
+      activeSection === id
+        ? "border-orange-500 text-orange-500"
+        : "border-transparent text-gray-700 hover:text-orange-500 hover:border-orange-500",
+    ].join(" ")
+
+  const mobileLinkClass = (id: SectionId) =>
+    [
+      "block transition-colors",
+      activeSection === id ? "text-orange-600 font-semibold" : "text-gray-700 hover:text-blue-600",
+    ].join(" ")
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
@@ -28,21 +83,41 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-orange-500 transition-colors">
+            <button
+              type="button"
+              className={desktopLinkClass("home")}
+              onClick={() => scrollToSection("home")}
+            >
               Home
-            </Link>
-            <Link href="/destinations" className="text-gray-700 hover:text-orange-500 transition-colors">
+            </button>
+            <button
+              type="button"
+              className={desktopLinkClass("destinations")}
+              onClick={() => scrollToSection("destinations")}
+            >
               Destinations
-            </Link>
-            <Link href="/tours" className="text-gray-700 hover:text-orange-500 transition-colors">
+            </button>
+            <button
+              type="button"
+              className={desktopLinkClass("packages")}
+              onClick={() => scrollToSection("packages")}
+            >
               Travel Packages
-            </Link>
-            <Link href="/vlogs" className="text-gray-700 hover:text-orange-500 transition-colors">
+            </button>
+            <button
+              type="button"
+              className={desktopLinkClass("vlogs")}
+              onClick={() => scrollToSection("vlogs")}
+            >
               Travel Vlogs
-            </Link>
-            <Link href="/about" className="text-gray-700 hover:text-orange-500 transition-colors">
+            </button>
+            <button
+              type="button"
+              className={desktopLinkClass("about")}
+              onClick={() => scrollToSection("about")}
+            >
               About
-            </Link>
+            </button>
             {/*
             <Link 
               href="/auth/signin" 
@@ -80,41 +155,41 @@ export default function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-3">
-            <Link 
-              href="/" 
-              className="block text-gray-700 hover:text-blue-600 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+            <button
+              type="button"
+              className={mobileLinkClass("home")}
+              onClick={() => scrollToSection("home")}
             >
               Home
-            </Link>
-            <Link 
-              href="/destinations" 
-              className="block text-gray-700 hover:text-blue-600 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+            </button>
+            <button
+              type="button"
+              className={mobileLinkClass("destinations")}
+              onClick={() => scrollToSection("destinations")}
             >
               Destinations
-            </Link>
-            <Link 
-              href="/tours" 
-              className="block text-gray-700 hover:text-blue-600 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+            </button>
+            <button
+              type="button"
+              className={mobileLinkClass("packages")}
+              onClick={() => scrollToSection("packages")}
             >
               Travel Packages
-            </Link>
-            <Link 
-              href="/vlogs" 
-              className="block text-gray-700 hover:text-blue-600 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+            </button>
+            <button
+              type="button"
+              className={mobileLinkClass("vlogs")}
+              onClick={() => scrollToSection("vlogs")}
             >
               Travel Vlogs
-            </Link>
-            <Link 
-              href="/about" 
-              className="block text-gray-700 hover:text-blue-600 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+            </button>
+            <button
+              type="button"
+              className={mobileLinkClass("about")}
+              onClick={() => scrollToSection("about")}
             >
               About
-            </Link>
+            </button>
             <Link 
               href="/auth/signin" 
               className="block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors text-center"
