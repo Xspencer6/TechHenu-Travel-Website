@@ -31,7 +31,7 @@ const WhyChooseUs = () => {
                         Why Choose NJOY Travel and Tours?
                     </h2>
                     <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                        Services that we provide for our dear customers
+                        Quality Service is assured
                     </p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -45,7 +45,7 @@ const WhyChooseUs = () => {
                                     <Image src={provide.icon} alt={"icon"} width={50} height={50} />
                                 </div>
                                 <div className="p-5">
-                                    <h2 className="font-bold text-gray-800 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors">
+                                    <h2 className="font-bold text-gray-800 mb-3 line-clamp-2 group-hover:text-orange-600 transition-colors">
                                         {provide.what}
                                     </h2>
                                     <div className="p-2">

@@ -87,7 +87,7 @@ export default function PopularDestinations() {
               </div>
               
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <h3 className="text-2xl font-bold mb-2 group-hover:text-blue-300 transition-colors">
+                <h3 className="text-2xl font-bold mb-2 group-hover:text-orange-300 transition-colors">
                   {destination.name}
                 </h3>
                 <p className="text-sm text-gray-200 mb-3 line-clamp-2">
@@ -97,7 +97,7 @@ export default function PopularDestinations() {
                   <span className="text-sm font-semibold">
                     {destination.tourCount} Tours Available
                   </span>
-                  <span className="text-blue-300 font-semibold group-hover:translate-x-2 transition-transform inline-block">
+                  <span className="text-orange-300 font-semibold group-hover:translate-x-2 transition-transform inline-block">
                     Explore →
                   </span>
                 </div>
@@ -109,7 +109,7 @@ export default function PopularDestinations() {
         <div className="text-center mt-12">
           <Link
             href="/destinations"
-            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+            className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors shadow-lg hover:shadow-xl"
           >
             View All Destinations
           </Link>

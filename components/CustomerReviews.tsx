@@ -72,7 +72,7 @@ export default function CustomerReviews() {
   }
 
   return (
-    <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <section className="py-16 bg-gradient-to-br from-orange-50 to-indigo-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
@@ -102,7 +102,7 @@ export default function CustomerReviews() {
                     />
                   </div>
                 ) : (
-                  <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 rounded-full bg-orange-600 flex items-center justify-center text-white font-bold">
                     {review.customerName.charAt(0)}
                   </div>
                 )}
@@ -150,7 +150,7 @@ export default function CustomerReviews() {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl">
+          <button className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors shadow-lg hover:shadow-xl">
             Read More Reviews
           </button>
         </div>

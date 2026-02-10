@@ -43,12 +43,14 @@ export default function Header() {
             <Link href="/about" className="text-gray-700 hover:text-orange-500 transition-colors">
               About
             </Link>
+            {/*
             <Link 
               href="/auth/signin" 
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
             >
               Sign In
             </Link>
+            */}
           </div>
 
           {/* Mobile Menu Button */}

@@ -87,7 +87,7 @@ const TravelPackages = () => {
                                 </div>
                             </div>
                             <div className="p-5">
-                                <h3 className="text-lg font-bold text-gray-800 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors">
+                                <h3 className="text-lg font-bold text-gray-800 mb-3 line-clamp-2 group-hover:text-orange-500 transition-colors">
                                     {pack.title}
                                 </h3>
                                 <div className="flex items-center justify-between">
@@ -110,7 +110,7 @@ const TravelPackages = () => {
                 <div className="text-center mt-12">
                     <Link
                         href="/vlogs"
-                        className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+                        className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors shadow-lg hover:shadow-xl"
                     >
                         View All Travel Vlogs
                     </Link>
