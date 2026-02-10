@@ -4,7 +4,8 @@ import Link from "next/link"
 import Image from "next/image"
 import { useEffect, useState } from "react"
 
-const SECTION_IDS = ["home", "destinations", "packages", "vlogs", "about"] as const
+// Ordered as they appear on the home page
+const SECTION_IDS = ["home", "about", "destinations", "packages", "vlogs"] as const
 
 type SectionId = (typeof SECTION_IDS)[number]
 
@@ -17,18 +18,27 @@ export default function Header() {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.target.id) {
-            const id = entry.target.id as SectionId
-            if (SECTION_IDS.includes(id)) {
-              setActiveSection(id)
-            }
-          }
-        })
+        // Among all intersecting sections, pick the one with the largest
+        // visible area (intersectionRatio). That should correspond to the
+        // section the user is "most" looking at.
+        const visibleEntries = entries
+          .filter(
+            (entry) =>
+              entry.isIntersecting &&
+              entry.target.id &&
+              SECTION_IDS.includes(entry.target.id as SectionId)
+          )
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
+
+        if (visibleEntries[0]?.target.id) {
+          setActiveSection(visibleEntries[0].target.id as SectionId)
+        }
       },
       {
-        threshold: 0.5,
-        rootMargin: "-80px 0px -40% 0px",
+        // Header height offset, but otherwise let the browser determine
+        // intersection based on the viewport.
+        rootMargin: "-80px 0px 0px 0px",
+        threshold: [0.15, 0.3, 0.5, 0.75],
       }
     )
 
@@ -45,6 +55,9 @@ export default function Header() {
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" })
     }
+    // Immediately reflect the clicked section in the header,
+    // instead of waiting for the IntersectionObserver to fire.
+    setActiveSection(id)
     setIsMenuOpen(false)
   }
 
@@ -116,7 +129,7 @@ export default function Header() {
               className={desktopLinkClass("about")}
               onClick={() => scrollToSection("about")}
             >
-              About
+              Why Choose Us
             </button>
             {/*
             <Link 
