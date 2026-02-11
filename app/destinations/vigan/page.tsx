@@ -67,7 +67,7 @@ const DestinationPage = () => {
                             Cobblestone roads, ancestral homes, and golden sunsets turn every stroll into a journey through history.
                         </p>
                     </div>
-                    <div className="py-6 text-center mb-12 text-[rgba(10,58,63,1)] font-serif">
+                    <div className="p-6 text-center mb-12 text-[rgba(10,58,63,1)] font-serif">
                         <p>
                             Recognized as a UNESCO World Heritage City, Vigan is one of the best-preserved Spanish colonial towns in Asia. 
                             Its iconic Calle Crisologo, horse-drawn kalesas, and centuries-old architecture create a setting where past and 

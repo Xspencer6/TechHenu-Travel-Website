@@ -67,7 +67,7 @@ const DestinationPage = () => {
                             Historic churches, coastal landscapes, and countryside charm reveal a province steeped in tradition.
                         </p>
                     </div>
-                    <div className="py-6 text-center mb-12 text-[rgba(10,58,63,1)] font-serif">
+                    <div className="p-6 text-center mb-12 text-[rgba(10,58,63,1)] font-serif">
                         <p>
                             Beyond Vigan lies the wider province of Ilocos Sur, home to heritage towns, scenic beaches, and centuries-old 
                             landmarks. From the Bantay Bell Tower and Santa Maria Church to quiet seaside stretches and rural communities, 

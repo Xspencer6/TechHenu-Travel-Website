@@ -67,7 +67,7 @@ const DestinationPage = () => {
                             Cool breezes, vibrant markets, and panoramic views make every turn a photo moment.
                         </p>
                     </div>
-                    <div className="py-6 text-center mb-12 text-[#3f280a] font-serif text-lg">
+                    <div className="p-6 text-center mb-12 text-[#3f280a] font-serif text-lg">
                         <p>
                             Perched high in the Cordillera highlands, Baguio is defined by its pine-covered hills,
                             crisp air, and sweeping mountain views. Often called the “Summer Capital of the

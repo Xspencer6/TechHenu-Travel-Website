@@ -67,7 +67,7 @@ const DestinationPage = () => {
                             Surfing, sun-kissed beaches, and dramatic cliffs make Baler a haven for adventure and relaxation alike.
                         </p>
                     </div>
-                    <div className="py-6 text-center mb-12 text-[rgba(10,58,63,1)] font-serif">
+                    <div className="p-6 text-center mb-12 text-[rgba(10,58,63,1)] font-serif">
                         <p>
                             Situated along the northeastern coast of Luzon, Baler is a laid-back town where the mountains meet the sea. Its long 
                             stretches of sandy beaches, rolling waves, and forested hills draw both surfers and nature lovers. Visitors can 

@@ -16,7 +16,7 @@ export default function TouristSpots({tourSpots}: TouristSpotsProps) {
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2">
             {tourSpots.map((spots) => (
-                <div key={spots.id} className="grop relative py-5">
+                <div key={spots.id} className="group relative overflow-hidden py-5 px-4 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     <div className="relative h-64 w-full">
                         <Image
                             src={spots.image}
@@ -25,7 +25,6 @@ export default function TouristSpots({tourSpots}: TouristSpotsProps) {
                             className="object-cover group-hover:scale-110 transition-transform duration-300"
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                     </div>
                     <div className="py-2">
                         <h1 className="text-2xl font-bold text-orange-800">

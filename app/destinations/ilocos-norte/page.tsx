@@ -67,7 +67,7 @@ const DestinationPage = () => {
                             Towering windmills, rugged coastlines, and historic landmarks make every journey a scenic adventure.
                         </p>
                     </div>
-                    <div className="py-6 text-center mb-12 text-[rgba(10,58,63,1)] font-serif text-lg">
+                    <div className="p-6 text-center mb-12 text-[rgba(10,58,63,1)] font-serif text-lg">
                         <p>
                             Ilocos Norte stretches along the northernmost coast of Luzon, where windswept beaches meet dramatic cliffs and 
                             centuries-old heritage sites. From the iconic Bangui Windmills to the pristine sands of Saud Beach, the region 
