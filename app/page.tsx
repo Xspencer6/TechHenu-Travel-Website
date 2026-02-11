@@ -1,10 +1,10 @@
-import Header from "@/components/header/Header"
-import PopularDestinations from "@/components/homePage/PopularDestinations"
-import TravelVlogs from "@/components/homePage/TravelVlogs"
-import CustomerReviews from "@/components/homePage/CustomerReviews"
-import Footer from "@/components/footer/Footer"
-import WhyChooseUs from "@/components/homePage/WhyChooseUs";
-import TravelPackages from "@/components/homePage/TravelPackages";
+import Header from "@/components/layout/header/Header"
+import PopularDestinations from "@/components/tours/homePage/PopularDestinations"
+import TravelVlogs from "@/components/tours/homePage/TravelVlogs"
+import CustomerReviews from "@/components/tours/homePage/CustomerReviews"
+import Footer from "@/components/layout/footer/Footer"
+import WhyChooseUs from "@/components/tours/homePage/WhyChooseUs";
+import TravelPackages from "@/components/tours/homePage/TravelPackages";
 
 export const HomePage = () => {
   return (

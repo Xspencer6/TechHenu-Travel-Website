@@ -1,6 +1,6 @@
-import TouristSpots from "@/components/destPage/TouristSpots";
-import Footer from "@/components/footer/Footer";
-import Header from "@/components/header/Header";
+import TouristSpots from "@/components/tours/destPage/TouristSpots";
+import Footer from "@/components/layout/footer/Footer";
+import Header from "@/components/layout/header/Header";
 
 const DestinationPage = () => {
     // Map to firebase later for final design
@@ -59,7 +59,7 @@ const DestinationPage = () => {
             </section>
             <section className="py-16 bg-white">
                 <div className="container mx-auto px-4">
-                    <div className="text-center mb-12 text-[rgba(10,58,63,1)]">
+                    <div className="text-center mb-12 text-[#3f280a]">
                         <h2 className="text-5xl font-bold mb-4">
                             Discover Baguio&apos;s City Above the Clouds
                         </h2>
@@ -67,7 +67,7 @@ const DestinationPage = () => {
                             Cool breezes, vibrant markets, and panoramic views make every turn a photo moment.
                         </p>
                     </div>
-                    <div className="py-6 text-center mb-12 text-[rgba(10,58,63,1)] font-serif">
+                    <div className="py-6 text-center mb-12 text-[#3f280a] font-serif text-lg">
                         <p>
                             Perched high in the Cordillera highlands, Baguio is defined by its pine-covered hills,
                             crisp air, and sweeping mountain views. Often called the “Summer Capital of the

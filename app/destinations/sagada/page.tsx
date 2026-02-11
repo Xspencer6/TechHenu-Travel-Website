@@ -1,6 +1,6 @@
-import TouristSpots from "@/components/destPage/TouristSpots";
-import Footer from "@/components/footer/Footer";
-import Header from "@/components/header/Header";
+import TouristSpots from "@/components/tours/destPage/TouristSpots";
+import Footer from "@/components/layout/footer/Footer";
+import Header from "@/components/layout/header/Header";
 
 const DestinationPage = () => {
 
@@ -67,7 +67,7 @@ const DestinationPage = () => {
                             Lush forests, echoing caves, and serene mountain trails invite visitors to slow down and connect with nature.
                         </p>
                     </div>
-                    <div className="py-6 text-center mb-12 text-[rgba(10,58,63,1)] font-serif">
+                    <div className="py-6 text-center mb-12 text-[rgba(10,58,63,1)] font-serif text-lg">
                         <p>
                             Tucked in the heart of the Cordillera Mountains, Sagada is a serene town where towering cliffs, caves, and
                             pine-covered hills meet centuries-old traditions. Known for its hanging coffins and breathtaking sunrise views
