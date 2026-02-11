@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-const TravelVlogs = () => {
+export default function TravelVlogs() {
     return (
         <section className="py-16 bg-white">
                 <div className="text-center mb-12">
@@ -101,5 +101,3 @@ const TravelVlogs = () => {
         </section>
     )
 }
-
-export default TravelVlogs;
