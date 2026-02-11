@@ -105,15 +105,6 @@ export default function PopularDestinations() {
             </Link>
           ))}
         </div>
-
-        <div className="text-center mt-12">
-          <Link
-            href="/destinations"
-            className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors shadow-lg hover:shadow-xl"
-          >
-            View All Destinations
-          </Link>
-        </div>
       </div>
     </section>
   )

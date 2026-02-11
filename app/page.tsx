@@ -1,10 +1,7 @@
 import Header from "@/components/Header"
-import PopularDestinations from "@/components/PopularDestinations"
-import TravelVlogs from "@/components/TravelVlogs"
 import CustomerReviews from "@/components/CustomerReviews"
 import Footer from "@/components/Footer"
 import WhyChooseUs from "@/components/WhyChooseUs";
-import TravelPackages from "@/components/TravelPackages";
 
 export default function Home() {
   return (
@@ -26,7 +23,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/tours"
+              href="/packages"
               className="bg-white text-orange-500 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-xl"
             >
               Browse Tours
@@ -43,9 +40,6 @@ export default function Home() {
 
       <main className="flex-grow">
         <WhyChooseUs />
-        <PopularDestinations />
-        <TravelPackages />
-        <TravelVlogs />
         <CustomerReviews />
       </main>
 

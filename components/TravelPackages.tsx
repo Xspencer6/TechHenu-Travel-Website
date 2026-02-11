@@ -65,7 +65,7 @@ const TravelPackages = () => {
                     {packages.map((pack) =>
                         <Link
                             key={pack.id}
-                            href={`${pack.id}}`}
+                            href={`/packages/${pack.id}`}
                             className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
                         >
                             <div className="relative h-48 w-full">
@@ -106,14 +106,6 @@ const TravelPackages = () => {
                             </div>
                         </Link>
                     )}
-                </div>
-                <div className="text-center mt-12">
-                    <Link
-                        href="/vlogs"
-                        className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors shadow-lg hover:shadow-xl"
-                    >
-                        View All Travel Packages
-                    </Link>
                 </div>
             </div>
         </section>
