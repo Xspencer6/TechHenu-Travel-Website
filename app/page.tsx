@@ -1,9 +1,12 @@
-import Header from "@/components/Header"
-import CustomerReviews from "@/components/CustomerReviews"
-import Footer from "@/components/Footer"
-import WhyChooseUs from "@/components/WhyChooseUs";
+import Header from "@/components/layout/header/Header"
+import PopularDestinations from "@/components/tours/homePage/PopularDestinations"
+import TravelVlogs from "@/components/tours/homePage/TravelVlogs"
+import CustomerReviews from "@/components/tours/homePage/CustomerReviews"
+import Footer from "@/components/layout/footer/Footer"
+import WhyChooseUs from "@/components/tours/homePage/WhyChooseUs";
+import TravelPackages from "@/components/tours/homePage/TravelPackages";
 
-export default function Home() {
+export const HomePage = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -40,6 +43,9 @@ export default function Home() {
 
       <main className="flex-grow">
         <WhyChooseUs />
+        <PopularDestinations/>
+        <TravelPackages/>
+        <TravelVlogs/>
         <CustomerReviews />
       </main>
 
@@ -47,3 +53,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default HomePage;

@@ -1,7 +1,7 @@
-import Header from "@/components/Header"
-import PopularDestinations from "@/components/PopularDestinations"
-import TravelVlogs from "@/components/TravelVlogs"
-import Footer from "@/components/Footer"
+import Header from "@/components/layout/header/Header"
+import PopularDestinations from "@/components/tours/homePage/PopularDestinations"
+import TravelVlogs from "@/components/tours/homePage/TravelVlogs"
+import Footer from "@/components/layout/footer/Footer"
 
 export default function DestinationsPage() {
   return (

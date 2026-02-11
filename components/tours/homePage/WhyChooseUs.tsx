@@ -4,7 +4,7 @@ import ticket from "@/app/assets/icons/ticket.svg.svg";
 import balloon from "@/app/assets/icons/hot-air-balloon.svg.svg"
 
 // No need for firebase, static elements
-const WhyChooseUs = () => {
+export default function WhyChooseUs() {
     const provisions = [
         {
             icon: diamond,
@@ -62,5 +62,3 @@ const WhyChooseUs = () => {
         </section>
     )
 }
-
-export default WhyChooseUs;
