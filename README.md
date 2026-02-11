@@ -1,4 +1,4 @@
-# TechHenu Travel & Tours Website
+# NJOY Travel & Tours Website
 
 A modern full-stack travel and tours website built with Next.js, TypeScript, Tailwind CSS, Firebase, and deployed on AWS.
 

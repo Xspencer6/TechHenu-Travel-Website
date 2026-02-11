@@ -72,7 +72,7 @@ export default function PopularDestinations() {
           {destinations.map((destination) => (
             <Link
               key={destination.id}
-              href={`/destinations/${destination.id}`}
+              href={`/destinations/${destination.name.toLowerCase()}`}
               className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
               <div className="relative h-64 w-full">
@@ -104,15 +104,6 @@ export default function PopularDestinations() {
               </div>
             </Link>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <Link
-            href="/destinations"
-            className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors shadow-lg hover:shadow-xl"
-          >
-            View All Destinations
-          </Link>
         </div>
       </div>
     </section>
