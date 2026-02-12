@@ -1,3 +1,6 @@
+"use client"
+
+import { useEffect, useState } from "react"
 import Image from "next/image"
 
 interface Review {
@@ -56,6 +59,31 @@ const reviews: Review[] = [
 ]
 
 export default function CustomerReviews() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const itemsPerView = 3
+
+  // Auto-advance the carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % reviews.length)
+    }, 3000) // 3 seconds per step
+
+    return () => clearInterval(interval)
+  }, [])
+
+  const getVisibleReviews = () => {
+    const visible: Review[] = []
+
+    for (let i = 0; i < itemsPerView; i++) {
+      const index = (currentIndex + i) % reviews.length
+      visible.push(reviews[index])
+    }
+
+    return visible
+  }
+
+  const visibleReviews = getVisibleReviews()
+
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }).map((_, i) => (
       <svg
@@ -83,8 +111,8 @@ export default function CustomerReviews() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {reviews.map((review) => (
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {visibleReviews.map((review) => (
             <div
               key={review.id}
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300"
@@ -146,6 +174,23 @@ export default function CustomerReviews() {
                 })}
               </p>
             </div>
+          ))}
+        </div>
+
+        {/* Pagination dots */}
+        <div className="flex justify-center mt-8 space-x-2">
+          {reviews.map((review, index) => (
+            <button
+              key={review.id}
+              type="button"
+              aria-label={`Go to review ${index + 1}`}
+              onClick={() => setCurrentIndex(index)}
+              className={`h-2.5 rounded-full transition-all duration-300 ${
+                index === currentIndex
+                  ? "w-6 bg-orange-600"
+                  : "w-2.5 bg-gray-300 hover:bg-gray-400"
+              }`}
+            />
           ))}
         </div>
 
