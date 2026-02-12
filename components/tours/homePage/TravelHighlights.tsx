@@ -1,41 +1,6 @@
 import Highlights from "../destPage/HighLights"
 
 export default function TravelHighlights() {
-    const meta_data = [
-        {
-            id: 0,
-            header: "dasasdfasf",
-            description: "sasassas",
-            link: "",
-            date: "1/1/1902",
-            comment_no: 9
-        },
-        {
-            id: 1,
-            header: "dasasdfasf",
-            description: "sasassas",
-            link: "",
-            date: "1/1/1902",
-            comment_no: 9
-        },
-        {
-            id: 2,
-            header: "dasasdfasf",
-            description: "sasassas",
-            link: "",
-            date: "1/1/1902",
-            comment_no: 9
-        },
-        {
-            id: 3,
-            header: "dasasdfasf",
-            description: "sasassas",
-            link: "",
-            date: "1/1/1902",
-            comment_no: 9
-        },
-    ]
-
     return (
         <section id="vlogs"className="py-16 bg-white">
             <div className="container mx-auto px-4">
@@ -47,7 +12,7 @@ export default function TravelHighlights() {
                         Experience the highlights of every journey.
                     </p>
                 </div>
-                <Highlights metaData={meta_data}/>
+                <Highlights/>
             </div>
         </section>
     )
