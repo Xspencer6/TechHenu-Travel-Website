@@ -43,9 +43,6 @@ export const HomePage = () => {
 
       <main className="flex-grow">
         <WhyChooseUs />
-        <PopularDestinations/>
-        <TravelPackages/>
-        <TravelVlogs/>
         <CustomerReviews />
       </main>
 
