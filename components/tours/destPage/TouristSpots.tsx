@@ -9,7 +9,7 @@ type TourSpot = {
 }
 
 type TouristSpotsProps = {
-  tourSpots: TourSpot[];
+    tourSpots: TourSpot[];
 };
 
 export default function TouristSpots({tourSpots}: TouristSpotsProps) {
