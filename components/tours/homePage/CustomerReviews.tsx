@@ -59,27 +59,24 @@ const reviews: Review[] = [
 ]
 
 export default function CustomerReviews() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const itemsPerView = 3
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const itemsPerView = 3;
+  const dotCount = Math.ceil(reviews.length / itemsPerView);
 
   // Auto-advance the carousel
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % reviews.length)
+      setCurrentIndex((prev) => (prev + 1) % dotCount)
     }, 3000) // 3 seconds per step
 
     return () => clearInterval(interval)
   }, [])
 
   const getVisibleReviews = () => {
-    const visible: Review[] = []
+    const start = currentIndex;
+    const end = start + itemsPerView;
 
-    for (let i = 0; i < itemsPerView; i++) {
-      const index = (currentIndex + i) % reviews.length
-      visible.push(reviews[index])
-    }
-
-    return visible
+    return reviews.slice(start, end); // slice reviews to proper indices
   }
 
   const visibleReviews = getVisibleReviews()
@@ -177,11 +174,11 @@ export default function CustomerReviews() {
           ))}
         </div>
 
-        {/* Pagination dots */}
+        {/* Pagination dots (dots per item slice) */}
         <div className="flex justify-center mt-8 space-x-2">
-          {reviews.map((review, index) => (
+          {Array.from({length: dotCount}).map((_, index) => (
             <button
-              key={review.id}
+              key={index}
               type="button"
               aria-label={`Go to review ${index + 1}`}
               onClick={() => setCurrentIndex(index)}
