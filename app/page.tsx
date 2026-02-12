@@ -1,10 +1,7 @@
 import Header from "@/components/layout/header/Header"
-import PopularDestinations from "@/components/tours/homePage/PopularDestinations"
-import TravelVlogs from "@/components/tours/homePage/TravelVlogs"
+import WhyChooseUs from "@/components/tours/homePage/WhyChooseUs";
 import CustomerReviews from "@/components/tours/homePage/CustomerReviews"
 import Footer from "@/components/layout/footer/Footer"
-import WhyChooseUs from "@/components/tours/homePage/WhyChooseUs";
-import TravelPackages from "@/components/tours/homePage/TravelPackages";
 
 export const HomePage = () => {
   return (
