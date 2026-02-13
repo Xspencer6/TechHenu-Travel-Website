@@ -1,4 +1,4 @@
-import Highlights from "../destPage/HighLights"
+import Highlights from "../destination/HighLights"
 
 export default function TravelHighlights() {
     return (

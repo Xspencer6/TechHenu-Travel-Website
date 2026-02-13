@@ -1,6 +1,6 @@
 import Header from "@/components/layout/header/Header"
-import PopularDestinations from "@/components/tours/homePage/PopularDestinations"
-import TravelHighlights from "@/components/tours/homePage/TravelHighlights"
+import PopularDestinations from "@/components/tours/home/PopularDestinations"
+import TravelHighlights from "@/components/tours/home/TravelHighlights"
 import Footer from "@/components/layout/footer/Footer"
 
 const DestinationsPage = () => {

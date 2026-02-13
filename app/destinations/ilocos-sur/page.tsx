@@ -1,4 +1,4 @@
-import TouristSpots from "@/components/tours/destPage/TouristSpots";
+import TouristSpots from "@/components/tours/destination/TouristSpots";
 import Footer from "@/components/layout/footer/Footer";
 import Header from "@/components/layout/header/Header";
 

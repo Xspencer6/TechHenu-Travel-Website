@@ -67,7 +67,7 @@ export default function CustomerReviews() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % dotCount)
-    }, 3000) // 3 seconds per step
+    }, 5000) // 5 seconds per step
 
     return () => clearInterval(interval)
   }, [])

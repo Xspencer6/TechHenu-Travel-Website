@@ -1,6 +1,6 @@
 import Header from "@/components/layout/header/Header"
-import WhyChooseUs from "@/components/tours/homePage/WhyChooseUs";
-import CustomerReviews from "@/components/tours/homePage/CustomerReviews"
+import WhyChooseUs from "@/components/tours/home/WhyChooseUs";
+import CustomerReviews from "@/components/tours/home/CustomerReviews"
 import Footer from "@/components/layout/footer/Footer"
 
 export const HomePage = () => {
