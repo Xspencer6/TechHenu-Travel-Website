@@ -4,12 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import PackageForm from "../package/form/PackageForm";
+import { list } from "postcss";
 
 interface Package {
     id: number;
     title: string;
     description: string;
-    duration: string;
+    duration: string[];
     inclusions: string;
     exclusions: string;
     sites: string;
@@ -22,7 +23,7 @@ const packages: Package[] = [
         id: 0,
         title: "Baler Tour Package",
         description: "Chase waterfalls, stroll along pristine beaches, and uncover the charm of Baler. Adventure and relaxation await in every corner.",
-        duration: "3 Days 2 Nights - P3299, 2 Days 1 Night - P2299",
+        duration: ["3 Days 2 Nights - P3299", "2 Days 1 Night - P2299"],
         inclusions: "Van transfer MNL/BALER/MNL, Accommodation with aircondition and wifi, Complete Baler tour",
         exclusions: "Entrance fees, Environmental fees",
         sites: "Balete tree, Motehr Falls, Ermita hill, Rock formation, Museo de Baler, Baler marker, Pasalubong center",
@@ -32,7 +33,7 @@ const packages: Package[] = [
     {
         id: 1,
         title: "Baguio Tour Package",
-        duration: "3 Days 2 Nights - P3299, 2 Days 1 Night - P2299",
+        duration: ["3 Days 2 Nights - P3299", "2 Days 1 Night - P2299"],
         description: "Breathe in the cool mountain air, wander vibrant markets, and enjoy scenic hillsides. Baguio’s culture and charm are waiting for you.",
         inclusions: "Van transfer MNL/BALER/MNL, Accommodation with aircondition and wifi, Complete Baler tour",
         exclusions: "Entrance fees, Environmental fees",
@@ -43,7 +44,7 @@ const packages: Package[] = [
     {
         id: 2,
         title: "Baguio Tour Package with Northern Blossom",
-        duration: "3 Days 2 Nights - P3599, 2 Days 1 Night - P2699",
+        duration: ["3 Days 2 Nights - P3599", "2 Days 1 Night - P2699"],
         description: "Breathe in the cool mountain air, wander vibrant markets, and enjoy scenic hillsides. Baguio’s culture and charm are waiting for you.",
         inclusions: "Van transfer MNL/BALER/MNL, Accommodation with aircondition and wifi, Complete Baler tour",
         exclusions: "Entrance fees, Environmental fees",
@@ -55,7 +56,7 @@ const packages: Package[] = [
         id: 3,
         title: "Sagada Tour Package",
         description: "Explore mystical caves, towering cliffs, and hanging coffins in Sagada. A journey full of adventure and unforgettable views.",
-        duration: "3 Days 2 Nights - P3299, 2 Days 1 Night - P2299",
+        duration: ["3 Days 2 Nights - P3299", "2 Days 1 Night - P2299"],
         inclusions: "Van transfer MNL/BALER/MNL, Accommodation with aircondition and wifi, Complete Baler tour",
         exclusions: "Entrance fees, Environmental fees",
         sites: "Balete tree, Motehr Falls, Ermita hill, Rock formation, Museo de Baler, Baler marker, Pasalubong center",
@@ -66,7 +67,7 @@ const packages: Package[] = [
         id: 4,
         title: "Ilocos Tour Package",
         description: "Step back in time through historic towns, lighthouse views, and rolling coastlines. Ilocos blends culture, scenery, and discovery.",
-        duration: "3 Days 2 Nights - P3299, 2 Days 1 Night - P2299",
+        duration: ["3 Days 2 Nights - P3299", "2 Days 1 Night - P2299"],
         inclusions: "Van transfer MNL/BALER/MNL, Accommodation with aircondition and wifi, Complete Baler tour",
         exclusions: "Entrance fees, Environmental fees",
         sites: "Balete tree, Motehr Falls, Ermita hill, Rock formation, Museo de Baler, Baler marker, Pasalubong center",
@@ -77,7 +78,7 @@ const packages: Package[] = [
         id: 5,
         title: "Vigan/Baguio Tour Package",
         description: "Experience the colonial streets of Vigan and the serene highlands of Baguio. A perfect mix of history, scenery, and relaxation.",
-        duration: "3 Days 2 Nights - P3299, 2 Days 1 Night - P2299",
+        duration: ["3 Days 2 Nights - P3299", "2 Days 1 Night - P2299"],
         inclusions: "Van transfer MNL/BALER/MNL, Accommodation with aircondition and wifi, Complete Baler tour",
         exclusions: "Entrance fees, Environmental fees",
         sites: "Balete tree, Motehr Falls, Ermita hill, Rock formation, Museo de Baler, Baler marker, Pasalubong center",
@@ -111,7 +112,7 @@ export default function TravelPackages() {
 
                     <div className="flex w-full transition-all duration-300">
                         {/* Adjust grid when package is clicked */}
-                        <div className={`transition-all duration-300 ${isAvail ? "w-[calc(100%-540px)]" : "w-full"}`}
+                        <div className={`transition-all duration-300 ${isAvail ? "w-[calc(100% - 540px)] lg:w-[calc(100% - 600px)]" : "w-full"}`}
                         >
                             <div className="grid w-full grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-6">
                                 {packages.map((pack) => (
@@ -156,9 +157,8 @@ export default function TravelPackages() {
 
                         {/* Sidebar package */}
                         <div
-                            className={`fixed top-16 right-0 h-screen lg:w-[540px] bg-slate-200 shadow-xl transition-transform duration-300 ease-in-out ${
-                                isAvail ? "translate-x-0" : "translate-x-full"
-                            }`}
+                            className={`fixed right-0 z-50 bg-slate-200 shadow-xl transition-transform duration-300 ease-in-out top-[70px]
+                                w-full sm:w-[540px] lg:w-[600px] h-[calc(100vh-70px)] flex flex-col ${isAvail ? "translate-x-0" : "translate-x-full"}`}
                         >
                             <PackageForm
                                 handlePackageForm={closePackageForm}
