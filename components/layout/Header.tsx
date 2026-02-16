@@ -1,9 +1,11 @@
 "use client"
 
-import Link from "next/link"
-import Image from "next/image"
-import { usePathname } from "next/navigation"
-import { useState } from "react"
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+
+import { motion } from "framer-motion";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -31,8 +33,17 @@ export default function Header() {
     ].join(" ")
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
-      <nav className="container mx-auto px-4 py-4">
+    <motion.header className="bg-white shadow-md sticky top-0 z-50"
+        initial={{opacity: 0, y: -100}}
+        animate={{opacity: 1, y: 1}}
+    >
+      <motion.nav className="container mx-auto px-4 py-4"
+          initial={{opacity:0, y: -100}}
+          animate={{opacity: 1, y: 1}}
+          transition={{
+            delay: 0.125
+          }}
+      >
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
@@ -136,7 +147,7 @@ export default function Header() {
             </Link>
           </div>
         )}
-      </nav>
-    </header>
+      </motion.nav>
+    </motion.header>
   )
 }
