@@ -64,12 +64,8 @@ export const HomePage = () => {
               </div>
             </div>
         </motion.section>
-
-        <main className="flex-grow">
-            <WhyChooseUs />
-            <CustomerReviews />
-        </main>
-
+        <WhyChooseUs />
+        <CustomerReviews />
         <Footer />
     </div>
   )

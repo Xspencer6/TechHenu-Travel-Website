@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
+import { motion } from "framer-motion";
 
 interface Review {
   id: string
@@ -59,144 +60,182 @@ const reviews: Review[] = [
 ]
 
 export default function CustomerReviews() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerView = 3;
-  const dotCount = Math.ceil(reviews.length / itemsPerView);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const itemsPerView = 3;
+    const dotCount = Math.ceil(reviews.length / itemsPerView);
 
-  // Auto-advance the carousel
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % dotCount)
-    }, 5000) // 5 seconds per step
+    // Auto-advance the carousel
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % dotCount)
+      }, 5000) // 5 seconds per step
 
-    return () => clearInterval(interval)
-  }, [])
+      return () => clearInterval(interval)
+    }, [])
 
-  const getVisibleReviews = () => {
-    const start = currentIndex;
-    const end = start + itemsPerView;
+    const getVisibleReviews = () => {
+      const start = currentIndex;
+      const end = start + itemsPerView;
 
-    return reviews.slice(start, end); // slice reviews to proper indices
-  }
+      return reviews.slice(start, end); // slice reviews to proper indices
+    }
 
-  const visibleReviews = getVisibleReviews()
+    const visibleReviews = getVisibleReviews()
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }).map((_, i) => (
-      <svg
-        key={i}
-        className={`w-5 h-5 ${
-          i < rating ? "text-yellow-400 fill-current" : "text-gray-300"
-        }`}
-        viewBox="0 0 20 20"
-        fill="currentColor"
-      >
-        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-      </svg>
-    ))
-  }
+    const renderStars = (rating: number) => {
+      return Array.from({ length: 5 }).map((_, i) => (
+        <svg
+          key={i}
+          className={`w-5 h-5 ${
+            i < rating ? "text-yellow-400 fill-current" : "text-gray-300"
+          }`}
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+      ))
+    }
 
-  return (
-    <section id="reviews" className="py-16 bg-gradient-to-br from-orange-50 to-indigo-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            What Our Customers Say
-          </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Real experiences from travelers who have explored the world with us
-          </p>
-        </div>
+    return (
+        <motion.section id="reviews" className="py-16 bg-gradient-to-br from-orange-50 to-indigo-50"
+            initial={{opacity: 0, y: -100}}
+            animate={{opacity: 1, y: 0}}
+            transition={{
+                delay: 0.275
+            }}
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {visibleReviews.map((review) => (
-            <div
-              key={review.id}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300"
-            >
-              {/* Customer Info */}
-              <div className="flex items-center space-x-4 mb-4">
-                {review.customerImage ? (
-                  <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                    <Image
-                      src={review.customerImage}
-                      alt={review.customerName}
-                      fill
-                      className="object-cover"
-                      sizes="48px"
-                    />
-                  </div>
-                ) : (
-                  <div className="w-12 h-12 rounded-full bg-orange-600 flex items-center justify-center text-white font-bold">
-                    {review.customerName.charAt(0)}
-                  </div>
-                )}
-                <div className="flex-1">
-                  <h3 className="font-bold text-gray-800">
-                    {review.customerName}
-                  </h3>
-                  {review.location && (
-                    <p className="text-sm text-gray-500">{review.location}</p>
-                  )}
-                </div>
-                <div className="flex items-center space-x-1">
-                  {renderStars(review.rating)}
-                </div>
+        >
+          <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                  <motion.h2 className="text-4xl font-bold text-gray-800 mb-4"
+                      initial={{opacity: 0, y: -70}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{
+                            delay: 0.375
+                        }}
+                  >
+                      What Our Customers Say
+                  </motion.h2>
+                  <motion.p className="text-gray-600 text-lg max-w-2xl mx-auto"
+                      initial={{opacity: 0, y: -70}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{
+                            delay: 0.4
+                        }}
+                  >
+                      Real experiences from travelers who have explored the world with us
+                  </motion.p>
               </div>
 
-              {/* Review Text */}
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                &quot;{review.review}&quot;
-              </p>
+            <motion.div className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+                initial={{opacity: 0, scale: 0}}
+                animate={{opacity: 1, scale: 1}}
+                transition={{
+                    delay: 0.3,
+                    type: "spring",
+                    duration: 0.1
+                }}
+            >
+                {visibleReviews.map((review) => (
+                    <div key={review.id}
+                      className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300"
+                    >
+                        {/* Customer Info */}
+                        <div className="flex items-center space-x-4 mb-4">
+                          {review.customerImage ? (
+                              <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                                  <Image
+                                    src={review.customerImage}
+                                    alt={review.customerName}
+                                    fill
+                                    className="object-cover"
+                                    sizes="48px"
+                                  />
+                              </div>
+                              ) : (
+                              <div className="w-12 h-12 rounded-full bg-orange-600 flex items-center justify-center text-white font-bold">
+                                  {review.customerName.charAt(0)}
+                              </div>
+                          )}
+                          <div className="flex-1">
+                            <h3 className="font-bold text-gray-800">
+                              {review.customerName}
+                            </h3>
+                            {review.location && (
+                              <p className="text-sm text-gray-500">{review.location}</p>
+                            )}
+                          </div>
+                          <div className="flex items-center space-x-1">
+                            {renderStars(review.rating)}
+                          </div>
+                        </div>
 
-              {/* Review Image */}
-              {review.reviewImage && (
-                <div className="relative h-48 w-full rounded-lg overflow-hidden mb-4">
-                  <Image
-                    src={review.reviewImage}
-                    alt={`Review by ${review.customerName}`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
-              )}
+                      {/* Review Text */}
+                      <p className="text-gray-700 mb-4 leading-relaxed">
+                        &quot;{review.review}&quot;
+                      </p>
 
-              {/* Date */}
-              <p className="text-xs text-gray-500">
-                {new Date(review.date).toLocaleDateString('en-US', {
-                  month: 'long',
-                  day: 'numeric',
-                  year: 'numeric'
-                })}
-              </p>
-            </div>
-          ))}
-        </div>
+                      {/* Review Image */}
+                      {review.reviewImage && (
+                        <div className="relative h-48 w-full rounded-lg overflow-hidden mb-4">
+                          <Image
+                            src={review.reviewImage}
+                            alt={`Review by ${review.customerName}`}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
+                        </div>
+                      )}
 
-        {/* Pagination dots (dots per item slice) */}
-        <div className="flex justify-center mt-8 space-x-2">
-          {Array.from({length: dotCount}).map((_, index) => (
-            <button
-              key={index}
-              type="button"
-              aria-label={`Go to review ${index + 1}`}
-              onClick={() => setCurrentIndex(index)}
-              className={`h-2.5 rounded-full transition-all duration-300 ${
-                index === currentIndex
-                  ? "w-6 bg-orange-600"
-                  : "w-2.5 bg-gray-300 hover:bg-gray-400"
-              }`}
-            />
-          ))}
-        </div>
+                      {/* Date */}
+                      <p className="text-xs text-gray-500">
+                        {new Date(review.date).toLocaleDateString('en-US', {
+                          month: 'long',
+                          day: 'numeric',
+                          year: 'numeric'
+                        })}
+                      </p>
+                    </div>
+                ))}
+            </motion.div>
 
-        <div className="text-center mt-12">
-          <button className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors shadow-lg hover:shadow-xl">
-            Read More Reviews
-          </button>
-        </div>
-      </div>
-    </section>
-  )
+            {/* Pagination dots (dots per item slice) */}
+            <motion.div className="flex justify-center mt-8 space-x-2"
+                initial={{opacity: 0, y: -70}}
+                animate={{opacity: 1, y: 0}}
+                transition={{
+                  delay: 0.4,
+                }}
+            >
+                {Array.from({length: dotCount}).map((_, index) => (
+                    <button
+                        key={index}
+                        type="button"
+                        aria-label={`Go to review ${index + 1}`}
+                        onClick={() => setCurrentIndex(index)}
+                        className={`h-2.5 rounded-full transition-all duration-300 ${
+                          index === currentIndex
+                            ? "w-6 bg-orange-600"
+                            : "w-2.5 bg-gray-300 hover:bg-gray-400"
+                        }`}
+                    />
+                ))}
+            </motion.div>
+
+            <motion.div className="text-center mt-12"
+                initial={{opacity: 0, y: -70}}
+                animate={{opacity: 1, y: 0}}
+                transition={{
+                  delay: 0.425,
+                }}
+            >
+                <button className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors shadow-lg hover:shadow-xl">
+                    Read More Reviews
+                </button>
+            </motion.div>
+          </div>
+        </motion.section>
+    )
 }
