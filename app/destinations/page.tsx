@@ -1,7 +1,7 @@
-import Header from "@/components/layout/header/Header"
+import Header from "@/components/layout/Header"
 import PopularDestinations from "@/components/tours/home/PopularDestinations"
 import TravelHighlights from "@/components/tours/home/TravelHighlights"
-import Footer from "@/components/layout/footer/Footer"
+import Footer from "@/components/layout/Footer"
 
 const DestinationsPage = () => {
     return (

@@ -1,7 +1,7 @@
 "use client";
 
-import Header from "@/components/layout/header/Header"
-import Footer from "@/components/layout/footer/Footer"
+import Header from "@/components/layout/Header"
+import Footer from "@/components/layout/Footer"
 import Image from "next/image";
 import { useState } from "react";
 import PackageForm from "@/components/tours/package/form/PackageForm";

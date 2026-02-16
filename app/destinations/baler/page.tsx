@@ -1,6 +1,6 @@
 import TouristSpots from "@/components/tours/destination/TouristSpots";
-import Footer from "@/components/layout/footer/Footer";
-import Header from "@/components/layout/header/Header";
+import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
 
 const DestinationPage = () => {
 
