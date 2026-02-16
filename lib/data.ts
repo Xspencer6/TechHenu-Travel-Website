@@ -1,5 +1,8 @@
-// Packages Data
+import diamond from "@/app/assets/icons/diamond.svg.svg";
+import ticket from "@/app/assets/icons/ticket.svg.svg";
+import balloon from "@/app/assets/icons/hot-air-balloon.svg.svg"
 
+// Packages Data
 interface Package {
     id: number;
     title: string;
@@ -135,3 +138,22 @@ export const destinations: Destination[] = [
         tourCount: 6
     },
 ]
+
+
+export const provisions = [
+        {
+            icon: diamond,
+            what: 'Skilled and Accommodating Drivers',
+            why: 'Drivers ensure every journey safe, smooth, and enjoyable for the whole family.',
+        },
+        {
+            icon: ticket,
+            what: 'Complete Tour',
+            why: 'Experience all the highlights with a carefully planned itinerary that maximizes your adventure.',
+        },
+        {
+            icon: balloon,
+            what: 'Round Trip Van Transfers',
+            why: 'Round-trip transfers are handled in comfort, taking care of every detail from start to finish.',
+        }
+    ]

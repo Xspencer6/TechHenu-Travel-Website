@@ -1,6 +1,6 @@
 "use client";
 
-import { destinations } from "@/lib/tempdata";
+import { destinations } from "@/lib/data";
 import Image from "next/image"
 import Link from "next/link"
 

@@ -35,7 +35,7 @@ export const HomePage = () => {
                     initial={{opacity: 0, y: -70}}
                     animate={{opacity: 1, y: 0}}
                     transition={{
-                        delay: 0.375
+                        delay: 0.35
                     }}
                 >
                     Explore breathtaking destinations and create memories that last a lifetime

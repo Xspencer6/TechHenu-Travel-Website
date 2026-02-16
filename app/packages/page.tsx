@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer"
 import Image from "next/image";
 import { useState } from "react";
 import PackageForm from "@/components/tours/package/form/PackageForm";
-import { packages } from "@/lib/tempdata";
+import { packages } from "@/lib/data";
 
 interface Package {
     id: number;
