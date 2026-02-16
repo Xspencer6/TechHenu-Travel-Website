@@ -1,5 +1,6 @@
 "use client";
 
+import { destinations } from "@/lib/tempdata";
 import Image from "next/image"
 import Link from "next/link"
 
@@ -11,53 +12,8 @@ interface Destination {
   tourCount: number
 }
 
-// Sample data - replace with data from Firestore later
-const destinations: Destination[] = [
-  {
-    id: 1,
-    name: "Baguio",
-    image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&h=600&fit=crop",
-    description: "Cool mountain escape known for pine forests, scenic views, and a relaxed city vibe.",
-    tourCount: 12
-  },
-  {
-    id: 2,
-    name: "Sagada",
-    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&h=600&fit=crop",
-    description: "Quiet highland town offering misty mountains, ancient traditions, and soulful adventure.",
-    tourCount: 8
-  },
-  {
-    id: 3,
-    name: "Ilocos Norte",
-    image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&h=600&fit=crop",
-    description: "Land of wind-swept coasts, historic landmarks, and dramatic northern landscapes.",
-    tourCount: 15
-  },
-  {
-    id: 4,
-    name: "Ilocos Sur",
-    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=600&fit=crop",
-    description: "Cultural heartland blending Spanish-era heritage, artisan crafts, and local flavors.",
-    tourCount: 10
-  },
-  {
-    id: 5,
-    name: "Baler",
-    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=600&fit=crop",
-    description: "Laid-back surf town where golden beaches meet lush mountains and rich history.",
-    tourCount: 10
-  },
-  {
-    id: 6,
-    name: "Vigan",
-    image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&h=600&fit=crop",
-    description: "Timeless heritage city with cobblestone streets, colonial charm, and living history.",
-    tourCount: 6
-  },
-]
-
 export default function PopularDestinations() {
+  const popularDest = destinations;
   return (
     <section id="destinations" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -71,7 +27,7 @@ export default function PopularDestinations() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {destinations.map((destination) => (
+          {popularDest.map((destination) => (
             <Link
               key={destination.id}
               href={`/destinations/${destination.name.toLowerCase().split(/\s+/).join('-')}`}
