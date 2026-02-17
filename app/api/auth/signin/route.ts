@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server"
 import { signInWithEmailAndPassword } from "firebase/auth"
 import { auth } from "@/lib/firebase"
 
+export const dynamic = 'force-dynamic'
+
 export async function POST(request: NextRequest) {
   try {
     const { email, password } = await request.json()
@@ -14,7 +16,7 @@ export async function POST(request: NextRequest) {
     }
 
     const userCredential = await signInWithEmailAndPassword(
-      auth,
+      auth(),
       email,
       password
     )

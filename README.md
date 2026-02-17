@@ -1,4 +1,4 @@
-# NJOY Travel & Tours Website
+## NJOY Travel & Tours Website
 
 A modern full-stack travel and tours website built with Next.js, TypeScript, Tailwind CSS, Firebase, and deployed on AWS.
 
@@ -378,5 +378,59 @@ This tech stack is highly employable because:
 9. **Add admin dashboard**
 
 ## License
+
+## Firebase Deployment
+
+This project is now set up for deployment via **Firebase Hosting** using the Firebase CLI.
+
+### One-time local setup
+
+1. **Install Firebase CLI** (if you don’t have it yet):
+
+   ```bash
+   npm install -g firebase-tools
+   ```
+
+2. **Log in to Firebase**:
+
+   ```bash
+   firebase login
+   ```
+
+3. **Set your Firebase project**:
+
+   - Create or choose a project in the Firebase Console.
+   - Update `.firebaserc` with your project id:
+
+     ```json
+     {
+       "projects": {
+         "default": "your-firebase-project-id"
+       }
+     }
+     ```
+
+4. **(Recommended) Run the guided Hosting setup once** so Firebase can detect your Next.js app and augment the config:
+
+   ```bash
+   firebase init hosting
+   ```
+
+   - Choose “Use an existing project” and select your project.
+   - When prompted about frameworks, answer **Yes** and let it detect **Next.js**.
+   - Accept defaults unless you have a custom build setup.
+
+The repo already contains `firebase.json` and `.firebaserc`; the CLI will update these as needed for frameworks support.
+
+### Deploy
+
+From the project root:
+
+```bash
+npm run build
+npm run deploy:firebase
+```
+
+Your app will be deployed to your Firebase Hosting URLs, e.g. `https://<project-id>.web.app`.
 
 MIT

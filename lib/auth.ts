@@ -6,7 +6,7 @@ import type { User } from "./firestore"
 // Get current Firebase user
 export function getCurrentFirebaseUser(): Promise<FirebaseUser | null> {
   return new Promise((resolve) => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth(), (user) => {
       unsubscribe()
       resolve(user)
     })

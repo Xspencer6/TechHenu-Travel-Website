@@ -3,6 +3,8 @@ import { createUserWithEmailAndPassword } from "firebase/auth"
 import { auth } from "@/lib/firebase"
 import { createUser } from "@/lib/firestore"
 
+export const dynamic = 'force-dynamic'
+
 export async function POST(request: NextRequest) {
   try {
     const { email, password, name } = await request.json()
@@ -16,7 +18,7 @@ export async function POST(request: NextRequest) {
 
     // Create user in Firebase Auth
     const userCredential = await createUserWithEmailAndPassword(
-      auth,
+      auth(),
       email,
       password
     )

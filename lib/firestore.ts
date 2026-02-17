@@ -69,10 +69,10 @@ const timestampToDate = (timestamp: any): Date => {
 const dateToTimestamp = (date: Date) => Timestamp.fromDate(date)
 
 // User operations
-export const userCollection = collection(db, "users")
+export const userCollection = () => collection(db(), "users")
 
 export async function getUser(userId: string): Promise<User | null> {
-  const userDoc = await getDoc(doc(userCollection, userId))
+  const userDoc = await getDoc(doc(userCollection(), userId))
   if (!userDoc.exists()) return null
   
   const data = userDoc.data()
@@ -85,7 +85,7 @@ export async function getUser(userId: string): Promise<User | null> {
 }
 
 export async function createUser(userData: Omit<User, "id" | "createdAt" | "updatedAt">): Promise<string> {
-  const userRef = doc(userCollection)
+  const userRef = doc(userCollection())
   const now = new Date()
   await setDoc(userRef, {
     ...userData,
@@ -96,7 +96,7 @@ export async function createUser(userData: Omit<User, "id" | "createdAt" | "upda
 }
 
 export async function updateUser(userId: string, updates: Partial<User>): Promise<void> {
-  const userRef = doc(userCollection, userId)
+  const userRef = doc(userCollection(), userId)
   await updateDoc(userRef, {
     ...updates,
     updatedAt: dateToTimestamp(new Date()),
@@ -104,10 +104,10 @@ export async function updateUser(userId: string, updates: Partial<User>): Promis
 }
 
 // Tour operations
-export const tourCollection = collection(db, "tours")
+export const tourCollection = () => collection(db(), "tours")
 
 export async function getTour(tourId: string): Promise<Tour | null> {
-  const tourDoc = await getDoc(doc(tourCollection, tourId))
+  const tourDoc = await getDoc(doc(tourCollection(), tourId))
   if (!tourDoc.exists()) return null
   
   const data = tourDoc.data()
@@ -138,7 +138,7 @@ export async function getTours(filters?: {
   
   constraints.push(orderBy("createdAt", "desc"))
   
-  const q = query(tourCollection, ...constraints)
+  const q = query(tourCollection(), ...constraints)
   const snapshot = await getDocs(q)
   
   return snapshot.docs.map((doc) => {
@@ -153,7 +153,7 @@ export async function getTours(filters?: {
 }
 
 export async function createTour(tourData: Omit<Tour, "id" | "createdAt" | "updatedAt">): Promise<string> {
-  const tourRef = doc(tourCollection)
+  const tourRef = doc(tourCollection())
   const now = new Date()
   await setDoc(tourRef, {
     ...tourData,
@@ -164,7 +164,7 @@ export async function createTour(tourData: Omit<Tour, "id" | "createdAt" | "upda
 }
 
 export async function updateTour(tourId: string, updates: Partial<Tour>): Promise<void> {
-  const tourRef = doc(tourCollection, tourId)
+  const tourRef = doc(tourCollection(), tourId)
   await updateDoc(tourRef, {
     ...updates,
     updatedAt: dateToTimestamp(new Date()),
@@ -172,14 +172,14 @@ export async function updateTour(tourId: string, updates: Partial<Tour>): Promis
 }
 
 export async function deleteTour(tourId: string): Promise<void> {
-  await deleteDoc(doc(tourCollection, tourId))
+  await deleteDoc(doc(tourCollection(), tourId))
 }
 
 // Booking operations
-export const bookingCollection = collection(db, "bookings")
+export const bookingCollection = () => collection(db(), "bookings")
 
 export async function getBooking(bookingId: string): Promise<Booking | null> {
-  const bookingDoc = await getDoc(doc(bookingCollection, bookingId))
+  const bookingDoc = await getDoc(doc(bookingCollection(), bookingId))
   if (!bookingDoc.exists()) return null
   
   const data = bookingDoc.data()
@@ -195,7 +195,7 @@ export async function getBooking(bookingId: string): Promise<Booking | null> {
 
 export async function getBookingsByUser(userId: string): Promise<Booking[]> {
   const q = query(
-    bookingCollection,
+    bookingCollection(),
     where("userId", "==", userId),
     orderBy("createdAt", "desc")
   )
@@ -216,7 +216,7 @@ export async function getBookingsByUser(userId: string): Promise<Booking[]> {
 
 export async function getBookingsByTour(tourId: string): Promise<Booking[]> {
   const q = query(
-    bookingCollection,
+    bookingCollection(),
     where("tourId", "==", tourId),
     orderBy("createdAt", "desc")
   )
@@ -236,7 +236,7 @@ export async function getBookingsByTour(tourId: string): Promise<Booking[]> {
 }
 
 export async function createBooking(bookingData: Omit<Booking, "id" | "createdAt" | "updatedAt">): Promise<string> {
-  const bookingRef = doc(bookingCollection)
+  const bookingRef = doc(bookingCollection())
   const now = new Date()
   await setDoc(bookingRef, {
     ...bookingData,
@@ -249,7 +249,7 @@ export async function createBooking(bookingData: Omit<Booking, "id" | "createdAt
 }
 
 export async function updateBooking(bookingId: string, updates: Partial<Booking>): Promise<void> {
-  const bookingRef = doc(bookingCollection, bookingId)
+  const bookingRef = doc(bookingCollection(), bookingId)
   const updateData: any = {
     ...updates,
     updatedAt: dateToTimestamp(new Date()),
