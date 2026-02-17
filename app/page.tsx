@@ -6,7 +6,7 @@ import CustomerReviews from "@/components/tours/home/CustomerReviews";
 import Footer from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 
-export default function HomePage() {
+const HomePage = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -75,4 +75,6 @@ export default function HomePage() {
       <Footer />
     </div>
   );
-}
+};
+
+export default HomePage;
