@@ -2,6 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
+    // Disable Next.js image optimization so remote images work
+    // correctly when deployed to Firebase Hosting (static files).
+    // This makes Next.js render regular <img> tags instead of
+    // going through the /_next/image optimizer, which Firebase
+    // does not handle by default.
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -26,7 +32,7 @@ const nextConfig = {
         hostname: 'scontent.fmnl17-5.fna.fbcdn.net',
         port: '',
         pathname: '/**',
-      }
+      },
     ],
   },
 }
