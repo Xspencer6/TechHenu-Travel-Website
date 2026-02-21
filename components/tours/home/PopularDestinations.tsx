@@ -39,8 +39,8 @@ export default function PopularDestinations() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35 }}
           >
-            Discover the world&apos;s most beautiful places and create
-            unforgettable memories
+            A glimpse into the breathtaking locations you may encounter on our
+            curated journeys.
           </motion.p>
         </div>
 
