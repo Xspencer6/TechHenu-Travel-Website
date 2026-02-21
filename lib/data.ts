@@ -345,7 +345,7 @@ export const baguio_spots = [
     id: 1,
     name: "Burnham Park",
     image:
-      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmediaim.expedia.com%2Fdestination%2F2%2Fb3b9632c93fcca2237e43669d417b20b.jpg&f=1&nofb=1&ipt=04187c70ec7782a86447d850440510b7fb0151abf6ae0c9291624c9b9d8ccbba",
+      "https://mediaim.expedia.com/destination/2/b3b9632c93fcca2237e43669d417b20b.jpg",
     header_desc: "Go for: Peaceful strolls, bike rides, boating",
     description:
       "This iconic urban park in the heart of Baguio boasts a scenic lake, manicured gardens, and tree‑lined walking paths—perfect for relaxing, picnics, or trying local street food right in the city center.",
@@ -353,8 +353,7 @@ export const baguio_spots = [
   {
     id: 2,
     name: "Mines View Park",
-    image:
-      "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&h=600&fit=crop",
+    image: "https://wanderera.com/wp-content/uploads/2022/11/Mines-View-11.jpg",
     header_desc: "Peaceful strolls, bike rides, boating",
     description:
       "A classic viewpoint overlooking rugged highland terrain and deep valleys, with souvenir stalls and photo spots that capture Baguio’s cool, misty landscape.",
@@ -372,7 +371,7 @@ export const baguio_spots = [
     id: 4,
     name: "Camp John Hay",
     image:
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=600&fit=crop",
+      "http://media-cache-ak0.pinimg.com/736x/e3/9b/4e/e39b4e7d9e88646bff42bfcc94b3344a.jpg",
     header_desc: "Peaceful strolls, bike rides, boating",
     description:
       "A historic woodland retreat with cool pine forests, café spots, historical sites, and bike and walking trails that weave through the old hill station grounds.",
@@ -382,7 +381,7 @@ export const baguio_spots = [
     name: "Baguio Cathedral (Our Lady of Atonement)",
     header_desc: "Peaceful strolls, bike rides, boating",
     image:
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=600&fit=crop",
+      "https://simbyahero.com/wp-content/uploads/2023/05/Benguet-Baguio-The-Baguio-Cathedral-of-Our-Lady-of-the-Atonement_c.jpg",
     description:
       "Perched on a hill, this cathedral is known for its vivid stained glass and sweeping views of the city—an iconic symbol of Baguio’s cultural landscape.",
   },
@@ -391,7 +390,7 @@ export const baguio_spots = [
     name: "Session Road",
     header_desc: "Peaceful strolls, bike rides, boating",
     image:
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&h=600&fit=crop",
+      "https://www.vacationhive.com/images/spots/baguio-session-road-banner.png",
     description:
       "Baguio’s main thoroughfare is lined with local cafés, restaurants, bakeries, and boutiques—a perfect spot to taste local specialties and unwind.",
   },
@@ -403,7 +402,7 @@ export const baler_spots = [
     id: 1,
     name: "Sabang Beach",
     image:
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&h=600&fit=crop",
+      "https://www.travel-palawan.com/wp-content/uploads/2023/04/Sabang-Beach-Puerto-Princesa-Palawan.jpeg",
     header_desc: "Surf culture and waves",
     description:
       "This broad, rolling stretch of Pacific coastline is famous among surfers and beach lovers for consistent waves and relaxed seaside energy.",
@@ -412,7 +411,7 @@ export const baler_spots = [
     id: 2,
     name: "Dicasalarin Cove",
     image:
-      "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&h=600&fit=crop",
+      "https://simplyphilippines.net/wp-content/uploads/2014/11/baler-philippines-92-770x515.jpg",
     header_desc: "Secluded beach camping",
     description:
       "Hidden away from the main town, this white-sand cove is ideal for camping, relaxing beside the Pacific, and soaking in serenity.",
@@ -421,7 +420,7 @@ export const baler_spots = [
     id: 3,
     name: "Baler Church (San Luis Obispo Parish)",
     image:
-      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&h=600&fit=crop",
+      "https://i0.wp.com/www.appetizingadventure.com/wp-content/uploads/2017/06/April-11-2013-461-1.jpg?resize=1024%2C683&ssl=1",
     header_desc: "Heritage and quiet reflection",
     description:
       "One of the oldest churches in the region, this historic parish witnessed pivotal events in Philippine history and stands peacefully amid town life.",
@@ -430,7 +429,7 @@ export const baler_spots = [
     id: 4,
     name: "Museo de Baler",
     image:
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=600&fit=crop",
+      "http://1.bp.blogspot.com/-FalNC3FnbNI/UkhqH_OHwSI/AAAAAAAAfh4/5SI7A6yCbzg/s1600/Museo+de+Baler.jpg",
     header_desc: "Local history and exhibits",
     description:
       "Step inside to learn about Baler’s past, including the famed Siege of Baler, presidential stories, and cultural milestones in Aurora.",
@@ -440,7 +439,7 @@ export const baler_spots = [
     name: "Diguisit Beach & Rock Formations",
     header_desc: "Scenic shorelines and sunrise views",
     image:
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=600&fit=crop",
+      "https://i.pinimg.com/originals/cd/5f/31/cd5f31d450c5aa1ac47dd1676b5f6aed.jpg",
     description:
       "Rocky outcrops and calm waters make this a beautiful sunrise destination, with tide-pools and dramatic seascapes to enjoy.",
   },
@@ -449,7 +448,7 @@ export const baler_spots = [
     name: "Quezon Park",
     header_desc: "Leisurely walks and shade",
     image:
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&h=600&fit=crop",
+      "https://1.bp.blogspot.com/-MlyC0TRrvCQ/XpGsH27Q0SI/AAAAAAAAVvU/syljMQjeLtoVbmA464tJiThI8pSwT2RyQCKgBGAsYHg/s1600/museo-de-baler-01.jpg",
     description:
       "A leafy park in the heart of Baler town where locals and visitors alike enjoy shaded paths, open lawns, and moments of relaxation between beach excursions.",
   },
@@ -461,7 +460,7 @@ export const ilocos_nor_spots = [
     id: 1,
     name: "Bangui Windmills",
     image:
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&h=600&fit=crop",
+      "https://1.bp.blogspot.com/-EK2nobt_-Wo/WUUhA6sf2TI/AAAAAAAAQcA/fBo9cEWlOxg7hGe3QSocZzzI__uzT2apACLcBGAs/s1600/Bangui-1.jpg",
     header_desc: "Iconic coastal views",
     description:
       "Towering turbines line the shoreline of Bangui Bay, creating a striking landscape where wind power and seaside vistas meet for memorable photos.",
@@ -470,7 +469,7 @@ export const ilocos_nor_spots = [
     id: 2,
     name: "Saud Beach",
     image:
-      "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&h=600&fit=crop",
+      "https://lakbaypinas.com/wp-content/uploads/2024/10/Snapinsta.app_434306090_391514813676490_6004269144404378717_n_1080.jpg",
     header_desc: "Beach relaxation & water sports",
     description:
       "One of the region’s most serene beaches with soft white sand and clear waters—popular for swimming and watersports.",
@@ -478,8 +477,7 @@ export const ilocos_nor_spots = [
   {
     id: 3,
     name: "Patapat Viaduct",
-    image:
-      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&h=600&fit=crop",
+    image: "https://c2.staticflickr.com/6/5200/5856318459_d96b7f7526_b.jpg",
     header_desc: "Scenic coastal drive & photos",
     description:
       "A dramatic stretch of elevated roadway along the northern coast, offering sweeping views of sea and cliffs—great for road trips and photography.",
@@ -487,8 +485,7 @@ export const ilocos_nor_spots = [
   {
     id: 4,
     name: "Kapurpurawan Rock Formation",
-    image:
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=600&fit=crop",
+    image: "https://live.staticflickr.com/8588/16016349609_0e363632cc_b.jpg",
     header_desc: "Natural limestone landscapes",
     description:
       "Unique pale limestone outcrops shaped by wind and waves—an otherworldly natural landmark perfect for walking and capturing striking shots.",
@@ -498,7 +495,7 @@ export const ilocos_nor_spots = [
     name: "Paoay Church (San Agustin Church)",
     header_desc: "History & architecture",
     image:
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=600&fit=crop",
+      "https://heroesofadventure.com/wp-content/uploads/2019/07/Paoay_Church_Ilocos_Norte.jpg",
     description:
       "A UNESCO World Heritage Site famed for its massive buttresses and ecclesiastical stone architecture—a classic Ilocos historical landmark.",
   },
@@ -507,7 +504,7 @@ export const ilocos_nor_spots = [
     name: "La Paz Sand Dunes",
     header_desc: "Off‑road adventure & sandboarding",
     image:
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&h=600&fit=crop",
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5YFKIMdq5RSsgBcN3r40DmWZvuxOu6hN0s9-TzqxzIi8jDH9j_wM8XQK-PTOOG78snqgTEkZHp1xrLBtQoLSCO551NzhxzbK4_H6eRl4gnK4kE_1Hmvo_xKdF22OUZYLjl5cEXI9QHfk/s640/_DSC0638.JPG",
     description:
       "Expansive golden dunes near Laoag that invite 4×4 rides and sandboarding for thrill‑seekers.",
   },
@@ -519,7 +516,7 @@ export const ilocos_sur_spots = [
     id: 1,
     name: "Bantay Bell Tower & Church",
     image:
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&h=600&fit=crop",
+      "https://1.bp.blogspot.com/-j_5KGltSIfg/Xtz8NyF5YFI/AAAAAAAAwAg/49XPfz7pEDoAd5SeH34jOd4u_1Ya3wHkgCLcBGAsYHQ/s1600/Bantay%2BChurch%2BBell%2BTower%2B7.JPG",
     header_desc: "Historic views and heritage",
     description:
       "This hilltop belfry offers sweeping vistas over Vigan and countryside, and its adjacent church reflects Spanish colonial history and architecture.",
@@ -528,7 +525,7 @@ export const ilocos_sur_spots = [
     id: 2,
     name: "Pagburnayan (Burnay Pottery)",
     image:
-      "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&h=600&fit=crop",
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjO8GzNYrlqlG4AI8E-efnJUJbbG3Lq6QCZi_5dbmCy3zGKHFM9gc99cA5K52p6khpzJrnO7-olovuZFo_xF1QOJhu1pK79yTjKPyAQDaMvUopCaR-miJ12cmlzQbYn8nSIHCR61Lt-cSQ/s1600/WP_20161203_15_26_31_Pro__highres.jpg",
     header_desc: "Hands on culture and crafts",
     description:
       "See traditional Ilocano pottery in action — form clay on a wheel and learn an art that’s been practiced here for generations.",
@@ -537,7 +534,7 @@ export const ilocos_sur_spots = [
     id: 3,
     name: "Aw-asen Falls",
     image:
-      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&h=600&fit=crop",
+      "https://tanawexplorer.com/wp-content/uploads/2024/06/Aw-Asen-Falls.jpg",
     header_desc: "Nature trek and waterfall cool-down",
     description:
       "A hidden highland waterfall with a refreshing plunge pool — perfect for cooling off after hiking through lush surroundings.",
@@ -546,7 +543,7 @@ export const ilocos_sur_spots = [
     id: 4,
     name: "Sangbay ni Ragsak Falls",
     image:
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=600&fit=crop",
+      "https://transitpinas.com/wp-content/uploads/2020/03/DSC07424_resize_20.jpg",
     header_desc: "Picturesque waterfall hikes",
     description:
       "Surrounded by rainforests and verdant cliffs, this cascading fall rewards hikers with nature’s serenity and dramatic views.",
@@ -556,7 +553,7 @@ export const ilocos_sur_spots = [
     name: "Dawara Falls",
     header_desc: "Gentel waterfall views",
     image:
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=600&fit=crop",
+      "https://i0.wp.com/transitpinas.com/wp-content/uploads/2020/03/DSC07561_resize_49.jpg?w=1038&ssl=1",
     description:
       "A short trek leads to beautiful falls giving misty sprays and peaceful vibes — great for contemplative nature moments.",
   },
@@ -565,7 +562,7 @@ export const ilocos_sur_spots = [
     name: "Yamashita Cave",
     header_desc: "Historic spelunking and hiking",
     image:
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&h=600&fit=crop",
+      "https://flashpacking4life.de/wp-content/uploads/2025/03/Sumilon-Island-Yamashita-Cave.jpg",
     description:
       "A WWII-era cave with compelling backstory surrounded by grassy ridges — a mix of history and outdoor exploration.",
   },
@@ -577,7 +574,7 @@ export const sagada_spots = [
     id: 1,
     name: "Sumaguing Cave",
     image:
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&h=600&fit=crop",
+      "https://www.funinthephilippines.com/wp-content/uploads/2023/10/cover-photo-sumaguing-cave-luzon.jpg",
     header_desc: "Spelunking adventure",
     description:
       "Nicknamed “Big Cave,” this guided cave system presents dramatic limestone formations and tunnels—ideal for explorers with sturdy shoes and a sense of adventure.",
@@ -586,7 +583,7 @@ export const sagada_spots = [
     id: 2,
     name: "Bomod‑ok Falls",
     image:
-      "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&h=600&fit=crop",
+      "https://images.squarespace-cdn.com/content/v1/5fa1522044bdda192713063c/88fde3f1-fafc-42c2-8c8e-48f0eee9e549/Bomod-Ok+Falls+of+Sagada",
     header_desc: "Hike & waterfall swim",
     description:
       "A scenic trek through rice terraces leads to a tall, cool waterfall where visitors can swim or relax beside cascading natural pools.",
@@ -595,7 +592,7 @@ export const sagada_spots = [
     id: 3,
     name: "Kiltepan Peak",
     image:
-      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&h=600&fit=crop",
+      "https://wanderera.com/wp-content/uploads/2017/09/c208694c13abe30089346133d6906bf4-1024x576.jpg",
     header_desc: "Sunrise views & sea of clouds",
     description:
       "This early‑morning viewpoint rewards visitors with breathtaking vistas over rolling hills and clouds floating through deep valleys at dawn.",
@@ -604,7 +601,7 @@ export const sagada_spots = [
     id: 4,
     name: "Echo Valley & Hanging Coffins",
     image:
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=600&fit=crop",
+      "https://adventuresofagoodman.com/wp-content/gallery/philippines/Hanging_Coffins-Echo_Valley-Sagada_Philippines-Greg_Goodman-AdventuresofaGoodMan-1-Edit.jpg",
     header_desc: "Culture & nature walk",
     description:
       "A short trail through lush forests leads to cliff‑side locations with traditional hanging coffins and echoing rock formations—an iconic Sagada cultural experience.",
@@ -614,7 +611,7 @@ export const sagada_spots = [
     name: "Sagada Weaving",
     header_desc: "Cultural crafts & souvenirs",
     image:
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=600&fit=crop",
+      "https://www.willflyforfood.net/wp-content/uploads/2019/01/sagada-weaving.jpg",
     description:
       "A heritage weaving center where you can observe traditional textile‑making and take home handcrafted inabel items.",
   },
@@ -622,8 +619,7 @@ export const sagada_spots = [
     id: 6,
     name: "Lake Danum",
     header_desc: "Relaxing sunset stroll",
-    image:
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&h=600&fit=crop",
+    image: "https://live.staticflickr.com/7545/15902413676_0c763779af_b.jpg",
     description:
       "A peaceful mountain lake framed by pine forests—ideal for picnics, reflections, and watching the sun dip over still waters.",
   },
@@ -634,8 +630,7 @@ export const vigan_spots = [
   {
     id: 1,
     name: "Calle Crisologo",
-    image:
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&h=600&fit=crop",
+    image: "https://live.staticflickr.com/7589/16747582116_328402d58f_b.jpg",
     header_desc: "Timeless heritage strolls",
     description:
       "Walk or ride a traditional kalesa down this cobblestone street lined with centuries-old Spanish houses — a living picture of colonial Philippines.",
@@ -644,7 +639,7 @@ export const vigan_spots = [
     id: 2,
     name: "Plaza Burgos / Plaza Salcedo",
     image:
-      "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&h=600&fit=crop",
+      "https://2.bp.blogspot.com/-yYKl7VxAriA/WK1QvhLoEbI/AAAAAAAADe8/8HUHTqn9fOcnwUCTJ2m78BSnWBXD-LQPgCPcB/s1600/1484146_778858695464123_715916583_n.jpg",
     header_desc: "Local life and light shows",
     description:
       "These historic town squares offer a central gathering place, water shows, and a taste of Vigan’s community rhythm.",
@@ -653,7 +648,7 @@ export const vigan_spots = [
     id: 3,
     name: "Vigan Cathedral",
     image:
-      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&h=600&fit=crop",
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghncuGcPoJ0lDQXRYHb2UD4EWxwbaO8IuunOigziTZZo49fUYGS1xxXSXcK-7QriFlHtGYRMUBn3uZ7iiKRN-EIvdcCFOiuKItx1Iy6Jc2ZBSjk6EZHJ3-9BbjIE4-KEM6IN60dXmMKQ/s400/Vigan+St+Pauls+Cathedral+night.jpg",
     header_desc: "Earthquake Baroque history",
     description:
       "This grand cathedral, part of the UNESCO-listed historic town, blends Spanish and local architectural influences, anchoring Vigan’s rich cultural roots.",
@@ -661,8 +656,7 @@ export const vigan_spots = [
   {
     id: 4,
     name: "Baluarte Zoo",
-    image:
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=600&fit=crop",
+    image: "https://jontotheworld.com/wp-content/uploads/2017/07/baluarte.jpg",
     header_desc: "Family fun and wildlife encounters",
     description:
       "Spanning wide savannah-like grounds, this zoo brings visitors up close with exotic animals and interactive exhibits that delight kids and adults alike.",
@@ -672,7 +666,7 @@ export const vigan_spots = [
     name: "Ilocos Sur Adventure Zone",
     header_desc: "Ziplines and outdoor thrills",
     image:
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=600&fit=crop",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D1004364848502633&f=1&nofb=1&ipt=d701bcedaafd2b9c8a7a222f875c110cc0e40834b9bc6bac7d499a0f73a68f66",
     description:
       "Just outside the city, this outdoor activity hub offers ziplines, kayaking, and challenge courses against a backdrop of river and mountain scenery.",
   },
@@ -681,7 +675,7 @@ export const vigan_spots = [
     name: "Mindoro Beach",
     header_desc: "Quiet sunset walks",
     image:
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&h=600&fit=crop",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/57/63/00/in-my-xperia-z2.jpg?w=1000&h=-1&s=1",
     description:
       "A short drive from historic sites leads to a calm shoreline with dark sands and sea views — a nice contrast after city explorations.",
   },
