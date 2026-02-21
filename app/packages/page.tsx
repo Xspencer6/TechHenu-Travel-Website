@@ -6,6 +6,8 @@ import Image from "next/image";
 import { useState } from "react";
 import PackageForm from "@/components/tours/package/form/PackageForm";
 import { packages } from "@/lib/data";
+import { motion } from "framer-motion";
+import { StaticImageData } from "next/image";
 
 interface Package {
   id: number;
@@ -15,7 +17,7 @@ interface Package {
   inclusions: string;
   exclusions: string;
   sites: [string, string][];
-  thumbnail: string;
+  thumbnail: StaticImageData;
   is_popular: boolean;
 }
 
@@ -35,16 +37,32 @@ const PackagesPage = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       <div className="relative w-screen overflow-hidden">
-        <section id="packages" className="py-16 bg-neutral-100">
+        <motion.section
+          id="packages"
+          className="py-16 bg-neutral-100"
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-800 mb-4">
+              <motion.h2
+                className="text-4xl font-bold text-gray-800 mb-4"
+                initial={{ opacity: 0, y: -100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+              >
                 Travel <span className="text-orange-600">Packages</span>
-              </h2>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              </motion.h2>
+              <motion.p
+                className="text-gray-600 text-lg max-w-2xl mx-auto"
+                initial={{ opacity: 0, y: -100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.325 }}
+              >
                 Discover bundled adventures featuring iconic landmarks, hidden
                 gems, and local flavors
-              </p>
+              </motion.p>
             </div>
 
             <div className="flex w-full transition-all duration-300">
@@ -105,7 +123,7 @@ const PackagesPage = () => {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
       </div>
       <Footer />
     </div>

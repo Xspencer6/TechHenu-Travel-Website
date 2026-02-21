@@ -1,6 +1,14 @@
 import diamond from "@/app/assets/icons/diamond.svg.svg";
 import ticket from "@/app/assets/icons/ticket.svg.svg";
 import balloon from "@/app/assets/icons/hot-air-balloon.svg.svg";
+import { StaticImageData } from "next/image";
+
+import baler from "@/public/baler-pack.png";
+import baguio from "@/public/baguio-pack.png";
+import baguioBlossom from "@/public/baguio-blossom-pack.png";
+import sagada from "@/public/sagada-pack.png";
+import ilocos from "@/public/ilocos-pack.png";
+import viganBaguio from "@/public/vigan-baguio-pack.png";
 
 // Packages Data
 interface Package {
@@ -11,7 +19,7 @@ interface Package {
   inclusions: string;
   exclusions: string;
   sites: [string, string][];
-  thumbnail: string;
+  thumbnail: StaticImageData;
   is_popular: boolean;
 }
 
@@ -28,35 +36,30 @@ export const packages: Package[] = [
     sites: [
       [
         "Balete tree",
-        "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=400&h=400&fit=crop",
+        "https://alchetron.com/cdn/balete-tree-5213a049-227b-4100-927c-54cb4673d90-resize-750.jpeg",
       ],
       [
         "Mother Falls",
-        "https://images.unsplash.com/photo-1578586561408-2b7e860a1a4b?w=400&h=400&fit=crop",
+        "https://hiketomountains.com/wp-content/uploads/2022/06/Ditumabo-Mother-Falls-15-1024x572.jpg",
       ],
       [
         "Ermita hill",
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=400&fit=crop",
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-KLvHqY1GXVw411AEuIVSj2EF06asWuHuhMMrRmoP_RERNheZ4VAPLSGl_PVrrDCVn4VloHEcrpKnxqjaomBD7zumX2mtYvQtk8TA19iotmf1uC6Lihpnx6DU0e2NrLRxgAE094RfBYDHAw3bu7_KgvvJ4MJZ4XIAUyTNwDbyjLlbdWQOE4_ICM7-/s1024/39623644991_ba67a79cc7_b.jpg",
       ],
       [
         "Rock formation",
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=400&fit=crop",
+        "https://media.istockphoto.com/id/695714762/photo/rock-formation-of-baler.jpg?s=170667a&w=0&k=20&c=uwqGKGBImDCM-j3g3vi1r3-EkgNAErsWHwE3FmIODWs=",
       ],
       [
         "Museo de Baler",
-        "https://images.unsplash.com/photo-1578698640889-75566b087d4a?w=400&h=400&fit=crop",
-      ],
-      [
-        "Baler marker",
-        "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&h=400&fit=crop",
+        "http://4.bp.blogspot.com/-Efdrx_7EVmg/VuQDZIjVpJI/AAAAAAAAKYU/LmFKYR8jOlcRswNx_yTJibItiJhx3Dk0A/s1600/_MG_1289.jpg",
       ],
       [
         "Pasalubong center",
-        "https://images.unsplash.com/photo-1581578731548-9d101ab953e7?w=400&h=400&fit=crop",
+        "https://centralluzon.politiko.com.ph/wp-content/uploads/2023/09/pasalubong-center.jpg",
       ],
     ],
-    thumbnail:
-      "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&h=600&fit=crop",
+    thumbnail: baler,
     is_popular: true,
   },
   {
@@ -70,32 +73,31 @@ export const packages: Package[] = [
     exclusions: "Entrance fees, Environmental fees",
     sites: [
       [
-        "Session Road",
-        "https://images.unsplash.com/photo-1584900210998-89c1e81235bd?w=400&h=400&fit=crop",
+        "Lion's Head",
+        "http://mybaguiocityguide.com/wp-content/uploads/2023/10/pexels-photo-12914725.jpeg",
       ],
       [
         "Camp John Hay",
-        "https://images.unsplash.com/photo-1584908657947-5c261478e9d8?w=400&h=400&fit=crop",
+        "http://www.thepoortraveler.net/wp-content/uploads/2014/01/camp-john-hay-amphitheater.jpg",
       ],
       [
         "Mines View Park",
-        "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&h=400&fit=crop",
+        "https://wanderera.com/wp-content/uploads/2022/11/Mines-View-11.jpg",
       ],
       [
         "Wright Park",
-        "https://images.unsplash.com/photo-1570549717069-33bed2eb6a26?w=400&h=400&fit=crop",
+        "https://wanderera.com/wp-content/uploads/2022/10/Wright-Park-9.jpg.webp",
       ],
       [
         "Burnham Park",
-        "https://images.unsplash.com/photo-1564507592333-a502e8d29d12?w=400&h=400&fit=crop",
+        "https://mediaim.expedia.com/destination/2/b3b9632c93fcca2237e43669d417b20b.jpg",
       ],
       [
-        "Bayanihan Park",
-        "https://images.unsplash.com/photo-1627483231358-72b7d8b87393?w=400&h=400&fit=crop",
+        "Igorot Stone Kingdom",
+        "https://wanderera.com/wp-content/uploads/2022/08/Igorot-Stone-Kingdom-2.jpg",
       ],
     ],
-    thumbnail:
-      "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&h=600&fit=crop",
+    thumbnail: baguio,
     is_popular: false,
   },
   {
@@ -103,42 +105,41 @@ export const packages: Package[] = [
     title: "Baguio Tour Package with Northern Blossom",
     duration: ["3 Days 2 Nights - P3599", "2 Days 1 Night - P2699"],
     description:
-      "Breathe in the cool mountain air, wander vibrant markets, and enjoy scenic hillsides. Baguio's culture and charm are waiting for you.",
+      "Breathe in the cool mountain air, wander vibrant markets, and enjoy scenic hillsides. Baguio's culture and charm, along with the Northern Blossoms are waiting for you.",
     inclusions:
       "Van transfer MNL/BAGUIO/MNL, Accommodation with aircondition and wifi, Complete Baguio + Northern Blossom tour",
     exclusions: "Entrance fees, Environmental fees",
     sites: [
       [
-        "Session Road",
-        "https://images.unsplash.com/photo-1584900210998-89c1e81235bd?w=400&h=400&fit=crop",
+        "Lion's Head",
+        "http://mybaguiocityguide.com/wp-content/uploads/2023/10/pexels-photo-12914725.jpeg",
       ],
       [
         "Camp John Hay",
-        "https://images.unsplash.com/photo-1584908657947-5c261478e9d8?w=400&h=400&fit=crop",
+        "http://www.thepoortraveler.net/wp-content/uploads/2014/01/camp-john-hay-amphitheater.jpg",
       ],
       [
         "Mines View Park",
-        "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&h=400&fit=crop",
+        "https://wanderera.com/wp-content/uploads/2022/11/Mines-View-11.jpg",
       ],
       [
         "Wright Park",
-        "https://images.unsplash.com/photo-1570549717069-33bed2eb6a26?w=400&h=400&fit=crop",
+        "https://wanderera.com/wp-content/uploads/2022/10/Wright-Park-9.jpg.webp",
       ],
       [
         "Burnham Park",
-        "https://images.unsplash.com/photo-1564507592333-a502e8d29d12?w=400&h=400&fit=crop",
+        "https://mediaim.expedia.com/destination/2/b3b9632c93fcca2237e43669d417b20b.jpg",
       ],
       [
-        "Bayanihan Park",
-        "https://images.unsplash.com/photo-1627483231358-72b7d8b87393?w=400&h=400&fit=crop",
+        "Igorot Stone Kingdom",
+        "https://wanderera.com/wp-content/uploads/2022/08/Igorot-Stone-Kingdom-2.jpg",
       ],
       [
         "Northern Blossom",
-        "https://images.unsplash.com/photo-1620293487918-ea3f8f4a3b1a?w=400&h=400&fit=crop",
+        "https://hiketomountains.com/wp-content/uploads/2022/05/Northern-Blossom-Day-Tour-7-1024x768.jpg",
       ],
     ],
-    thumbnail:
-      "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&h=600&fit=crop",
+    thumbnail: baguioBlossom,
     is_popular: false,
   },
   {
@@ -146,38 +147,37 @@ export const packages: Package[] = [
     title: "Sagada Tour Package",
     description:
       "Explore mystical caves, towering cliffs, and hanging coffins in Sagada. A journey full of adventure and unforgettable views.",
-    duration: ["3 Days 2 Nights - P3299", "2 Days 1 Night - P2299"],
+    duration: ["3 Days 2 Nights - P3799", "2 Days 1 Night - P2999"],
     inclusions:
       "Van transfer MNL/SAGADA/MNL, Accommodation with aircondition and wifi, Complete Sagada tour",
     exclusions: "Entrance fees, Environmental fees",
     sites: [
       [
         "Sumaguing Cave",
-        "https://images.unsplash.com/photo-1588889485458-2d3ece109c1b?w=400&h=400&fit=crop",
+        "https://www.funinthephilippines.com/wp-content/uploads/2023/10/cover-photo-sumaguing-cave-luzon.jpg",
       ],
       [
         "Hanging Coffins",
-        "https://images.unsplash.com/photo-1600433792800-9e52d3c664b1?w=400&h=400&fit=crop",
+        "https://adventuresofagoodman.com/wp-content/gallery/philippines/Hanging_Coffins-Echo_Valley-Sagada_Philippines-Greg_Goodman-AdventuresofaGoodMan-1-Edit.jpg",
       ],
       [
-        "Echo Valley",
-        "https://images.unsplash.com/photo-1628350461169-8b7d2f3a2e1b?w=400&h=400&fit=crop",
+        "Bomod‑ok Falls",
+        "https://images.squarespace-cdn.com/content/v1/5fa1522044bdda192713063c/88fde3f1-fafc-42c2-8c8e-48f0eee9e549/Bomod-Ok+Falls+of+Sagada",
       ],
       [
         "Big Hole",
-        "https://images.unsplash.com/photo-1628350461169-8b7d2f3a2e1b?w=400&h=400&fit=crop",
+        "https://media02.stockfood.com/largepreviews/MjE4NTA1MDU5Mw==/70485503--A-Filipino-Tour-Guide-Holds-A-Lantern-Inside-Sumaging-Cave-Or-Big-Cave-Near-Sagada-Luzon-Philippines.jpg",
       ],
       [
         "Underground River",
-        "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=400&fit=crop",
+        "https://1.bp.blogspot.com/-nxXr4_2_A1E/WtmpZXiVcOI/AAAAAAAAVCs/ZGK_8mbZcagGm5cPoOyccgrvGv9uDzbMACLcBGAs/s1600/DSCF3436.JPG",
       ],
       [
         "Kiltepan Rice Terraces",
-        "https://images.unsplash.com/photo-1620250476814-8b55a3e9a4c6?w=400&h=400&fit=crop",
+        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.QcSPCd2o46cBfKiXERx0QAHaE8%3Fpid%3DApi&f=1&ipt=392fe612fd6ef030a194d982390fddca5420038a7085cfb87791ca2227a6ed00",
       ],
     ],
-    thumbnail:
-      "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&h=600&fit=crop",
+    thumbnail: sagada,
     is_popular: false,
   },
   {
@@ -185,34 +185,33 @@ export const packages: Package[] = [
     title: "Ilocos Tour Package",
     description:
       "Step back in time through historic towns, lighthouse views, and rolling coastlines. Ilocos blends culture, scenery, and discovery.",
-    duration: ["3 Days 2 Nights - P3299", "2 Days 1 Night - P2299"],
+    duration: ["3 Days 2 Nights - P3599", "2 Days 1 Night - P2999"],
     inclusions:
       "Van transfer MNL/ILOCOS/MNL, Accommodation with aircondition and wifi, Complete Ilocos tour",
     exclusions: "Entrance fees, Environmental fees",
     sites: [
       [
         "Paoay Church",
-        "https://images.unsplash.com/photo-1558618047-3c8c76ca6e91?w=400&h=400&fit=crop",
+        "https://heroesofadventure.com/wp-content/uploads/2019/07/Paoay_Church_Ilocos_Norte.jpg",
       ],
       [
         "Cape Bojeador Lighthouse",
-        "https://images.unsplash.com/photo-1558618047-3c8c76ca6e91?w=400&h=400&fit=crop",
+        "https://i.pinimg.com/originals/ba/f9/cf/baf9cfb1ad977428f5f4571b37ff0f4d.jpg",
       ],
       [
         "Bangui Windmills",
-        "https://images.unsplash.com/photo-1593941700782-340d5ec7b5f4?w=400&h=400&fit=crop",
+        "https://1.bp.blogspot.com/-EK2nobt_-Wo/WUUhA6sf2TI/AAAAAAAAQcA/fBo9cEWlOxg7hGe3QSocZzzI__uzT2apACLcBGAs/s1600/Bangui-1.jpg",
       ],
       [
         "Malacañang of the North",
-        "https://images.unsplash.com/photo-1620136145416-938b9a5a9e4c?w=400&h=400&fit=crop",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/bf/32/9f/malacanang-of-the-north.jpg?w=1000&h=-1&s=1",
       ],
       [
-        "Saud Beach",
-        "https://images.unsplash.com/photo-1551524164-748d3080bf14?w=400&h=400&fit=crop",
+        "Blue Lagoon",
+        "https://i.pinimg.com/originals/ec/22/76/ec2276dce0e2216e102161b854a60e1e.png",
       ],
     ],
-    thumbnail:
-      "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&h=600&fit=crop",
+    thumbnail: ilocos,
     is_popular: false,
   },
   {
@@ -220,34 +219,37 @@ export const packages: Package[] = [
     title: "Vigan/Baguio Tour Package",
     description:
       "Experience the colonial streets of Vigan and the serene highlands of Baguio. A perfect mix of history, scenery, and relaxation.",
-    duration: ["3 Days 2 Nights - P3299", "2 Days 1 Night - P2299"],
+    duration: ["3 Days 2 Nights - P3599"],
     inclusions:
       "Van transfer MNL/VIGAN-BAGUIO/MNL, Accommodation with aircondition and wifi, Complete Vigan + Baguio tour",
     exclusions: "Entrance fees, Environmental fees",
     sites: [
       [
         "Calle Crisologo",
-        "https://images.unsplash.com/photo-1558618047-3c8c76ca6e91?w=400&h=400&fit=crop",
+        "https://live.staticflickr.com/7589/16747582116_328402d58f_b.jpg",
       ],
       [
         "Baluarte",
-        "https://images.unsplash.com/photo-1558618047-3c8c76ca6e91?w=400&h=400&fit=crop",
+        "https://jontotheworld.com/wp-content/uploads/2017/07/baluarte.jpg",
       ],
       [
-        "St. Paul's Cathedral",
-        "https://images.unsplash.com/photo-1558618047-3c8c76ca6e91?w=400&h=400&fit=crop",
+        "Burham Park",
+        "https://mediaim.expedia.com/destination/2/b3b9632c93fcca2237e43669d417b20b.jpg",
       ],
       [
-        "Session Road",
-        "https://images.unsplash.com/photo-1584900210998-89c1e81235bd?w=400&h=400&fit=crop",
+        "Vigan pottery",
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjO8GzNYrlqlG4AI8E-efnJUJbbG3Lq6QCZi_5dbmCy3zGKHFM9gc99cA5K52p6khpzJrnO7-olovuZFo_xF1QOJhu1pK79yTjKPyAQDaMvUopCaR-miJ12cmlzQbYn8nSIHCR61Lt-cSQ/s1600/WP_20161203_15_26_31_Pro__highres.jpg",
       ],
       [
         "Mines View Park",
-        "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&h=400&fit=crop",
+        "https://wanderera.com/wp-content/uploads/2022/11/Mines-View-11.jpg",
+      ],
+      [
+        "The Mansion",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/7d/c9/16/zoomed-picture.jpg?w=1000&h=-1&s=1",
       ],
     ],
-    thumbnail:
-      "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&h=600&fit=crop",
+    thumbnail: viganBaguio,
     is_popular: false,
   },
 ];

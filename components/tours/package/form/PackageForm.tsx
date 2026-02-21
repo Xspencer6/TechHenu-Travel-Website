@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { StaticImageData } from "next/image";
 
 interface PackageType {
   id: number;
@@ -8,7 +9,7 @@ interface PackageType {
   inclusions: string;
   exclusions: string;
   sites: [string, string][];
-  thumbnail: string;
+  thumbnail: StaticImageData;
   is_popular: boolean;
 }
 
@@ -61,7 +62,7 @@ export default function PackageForm({
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <span className="text-sm text-gray-700 text-center max-w-20 truncate">
+                      <span className="text-sm text-gray-700 text-center leading-tight">
                         {site}
                       </span>
                     </div>
@@ -97,7 +98,7 @@ export default function PackageForm({
           )}
 
           <a
-            href=""
+            href="https://www.facebook.com/profile.php?id=100083007744889"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full rounded-lg bg-black py-3 text-white inline-block text-center font-medium no-underline hover:bg-gray-800 hover:scale-105 transition"
