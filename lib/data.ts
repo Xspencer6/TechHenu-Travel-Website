@@ -36,23 +36,23 @@ export const packages: Package[] = [
     sites: [
       [
         "Balete tree",
-        "https://unsplash.com/photos/tree-roots-and-trunk-textures-are-vividly-displayed-BRHaFGN7hOg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Balete_Tree.jpg/640px-Balete_Tree.jpg",
       ],
       [
         "Mother Falls",
-        "https://hiketomountains.com/wp-content/uploads/2022/06/Ditumabo-Mother-Falls-15-1024x572.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Ditumabo_Fall.jpg/640px-Ditumabo_Fall.jpg",
       ],
       [
         "Ermita hill",
-        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-KLvHqY1GXVw411AEuIVSj2EF06asWuHuhMMrRmoP_RERNheZ4VAPLSGl_PVrrDCVn4VloHEcrpKnxqjaomBD7zumX2mtYvQtk8TA19iotmf1uC6Lihpnx6DU0e2NrLRxgAE094RfBYDHAw3bu7_KgvvJ4MJZ4XIAUyTNwDbyjLlbdWQOE4_ICM7-/s1024/39623644991_ba67a79cc7_b.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/ERMITA_HILL.jpg/640px-ERMITA_HILL.jpg",
       ],
       [
         "Rock formation",
-        "https://media.istockphoto.com/id/695714762/photo/rock-formation-of-baler.jpg?s=170667a&w=0&k=20&c=uwqGKGBImDCM-j3g3vi1r3-EkgNAErsWHwE3FmIODWs=",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Islets3ljf.jpg/640px-Islets3ljf.jpg",
       ],
       [
         "Museo de Baler",
-        "http://4.bp.blogspot.com/-Efdrx_7EVmg/VuQDZIjVpJI/AAAAAAAAKYU/LmFKYR8jOlcRswNx_yTJibItiJhx3Dk0A/s1600/_MG_1289.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Museo_de_Baler%2C_Baler%2C_Aurora%2C_April_2023.jpg/640px-Museo_de_Baler%2C_Baler%2C_Aurora%2C_April_2023.jpg",
       ],
       [
         "Pasalubong center",
@@ -74,27 +74,27 @@ export const packages: Package[] = [
     sites: [
       [
         "Lion's Head",
-        "http://mybaguiocityguide.com/wp-content/uploads/2023/10/pexels-photo-12914725.jpeg",
+        "https://i.pinimg.com/736x/6b/ad/1b/6bad1b56fc17c72452560a0caaab0cc8.jpg",
       ],
       [
         "Camp John Hay",
-        "http://www.thepoortraveler.net/wp-content/uploads/2014/01/camp-john-hay-amphitheater.jpg",
+        "https://i.pinimg.com/originals/e3/9b/4e/e39b4e7d9e88646bff42bfcc94b3344a.jpg",
       ],
       [
         "Mines View Park",
-        "https://wanderera.com/wp-content/uploads/2022/11/Mines-View-11.jpg",
+        "https://i.pinimg.com/originals/27/07/d8/2707d8d66c0352b5aa967b30047c4d51.jpg",
       ],
       [
         "Wright Park",
-        "https://wanderera.com/wp-content/uploads/2022/10/Wright-Park-9.jpg.webp",
+        "https://i.pinimg.com/736x/c7/51/01/c751013915bddb6458fe00f73d88ef93--baguio-philippines.jpg",
       ],
       [
         "Burnham Park",
-        "https://mediaim.expedia.com/destination/2/b3b9632c93fcca2237e43669d417b20b.jpg",
+        "https://i.pinimg.com/originals/bd/6a/23/bd6a238a256cedad1e081e3e8f953d23.jpg",
       ],
       [
         "Igorot Stone Kingdom",
-        "https://wanderera.com/wp-content/uploads/2022/08/Igorot-Stone-Kingdom-2.jpg",
+        "https://i.pinimg.com/originals/e3/fe/69/e3fe699857d8ba43d5be10fa0afeca1c.jpg",
       ],
     ],
     thumbnail: baguio,
@@ -112,31 +112,31 @@ export const packages: Package[] = [
     sites: [
       [
         "Lion's Head",
-        "http://mybaguiocityguide.com/wp-content/uploads/2023/10/pexels-photo-12914725.jpeg",
+        "https://i.pinimg.com/736x/6b/ad/1b/6bad1b56fc17c72452560a0caaab0cc8.jpg",
       ],
       [
         "Camp John Hay",
-        "http://www.thepoortraveler.net/wp-content/uploads/2014/01/camp-john-hay-amphitheater.jpg",
+        "https://i.pinimg.com/originals/e3/9b/4e/e39b4e7d9e88646bff42bfcc94b3344a.jpg",
       ],
       [
         "Mines View Park",
-        "https://wanderera.com/wp-content/uploads/2022/11/Mines-View-11.jpg",
+        "https://i.pinimg.com/originals/27/07/d8/2707d8d66c0352b5aa967b30047c4d51.jpg",
       ],
       [
         "Wright Park",
-        "https://wanderera.com/wp-content/uploads/2022/10/Wright-Park-9.jpg.webp",
+        "https://i.pinimg.com/736x/c7/51/01/c751013915bddb6458fe00f73d88ef93--baguio-philippines.jpg",
       ],
       [
         "Burnham Park",
-        "https://mediaim.expedia.com/destination/2/b3b9632c93fcca2237e43669d417b20b.jpg",
+        "https://i.pinimg.com/originals/bd/6a/23/bd6a238a256cedad1e081e3e8f953d23.jpg",
       ],
       [
         "Igorot Stone Kingdom",
-        "https://wanderera.com/wp-content/uploads/2022/08/Igorot-Stone-Kingdom-2.jpg",
+        "https://i.pinimg.com/originals/e3/fe/69/e3fe699857d8ba43d5be10fa0afeca1c.jpg",
       ],
       [
         "Northern Blossom",
-        "https://hiketomountains.com/wp-content/uploads/2022/05/Northern-Blossom-Day-Tour-7-1024x768.jpg",
+        "https://i.pinimg.com/originals/a6/d9/e0/a6d9e03aba7b39b52975b129af42f606.jpg",
       ],
     ],
     thumbnail: baguioBlossom,
@@ -154,19 +154,15 @@ export const packages: Package[] = [
     sites: [
       [
         "Sumaguing Cave",
-        "https://www.funinthephilippines.com/wp-content/uploads/2023/10/cover-photo-sumaguing-cave-luzon.jpg",
+        "https://i.pinimg.com/originals/a6/dd/f3/a6ddf3616c19e0505eef4d2e8d67db55.jpg",
       ],
       [
         "Hanging Coffins",
-        "https://adventuresofagoodman.com/wp-content/gallery/philippines/Hanging_Coffins-Echo_Valley-Sagada_Philippines-Greg_Goodman-AdventuresofaGoodMan-1-Edit.jpg",
+        "https://i.pinimg.com/736x/77/4c/9d/774c9d8f20fc27219784fe1f75e57158.jpg",
       ],
       [
         "Bomod‑ok Falls",
-        "https://images.squarespace-cdn.com/content/v1/5fa1522044bdda192713063c/88fde3f1-fafc-42c2-8c8e-48f0eee9e549/Bomod-Ok+Falls+of+Sagada",
-      ],
-      [
-        "Big Hole",
-        "https://media02.stockfood.com/largepreviews/MjE4NTA1MDU5Mw==/70485503--A-Filipino-Tour-Guide-Holds-A-Lantern-Inside-Sumaging-Cave-Or-Big-Cave-Near-Sagada-Luzon-Philippines.jpg",
+        "https://i.pinimg.com/originals/9f/b8/01/9fb801249fec4856b6a6a83902dd3a32.jpg",
       ],
       [
         "Underground River",
@@ -174,7 +170,7 @@ export const packages: Package[] = [
       ],
       [
         "Kiltepan Rice Terraces",
-        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.QcSPCd2o46cBfKiXERx0QAHaE8%3Fpid%3DApi&f=1&ipt=392fe612fd6ef030a194d982390fddca5420038a7085cfb87791ca2227a6ed00",
+        "https://i.pinimg.com/736x/af/38/e2/af38e213759e8723fad009c400aa1356--banaue-rice-terraces-the-philippines.jpg",
       ],
     ],
     thumbnail: sagada,
@@ -192,7 +188,7 @@ export const packages: Package[] = [
     sites: [
       [
         "Paoay Church",
-        "https://heroesofadventure.com/wp-content/uploads/2019/07/Paoay_Church_Ilocos_Norte.jpg",
+        "https://i.pinimg.com/736x/94/d4/ef/94d4efcdcb7193f6ebef14507453045e.jpg",
       ],
       [
         "Cape Bojeador Lighthouse",
@@ -200,11 +196,11 @@ export const packages: Package[] = [
       ],
       [
         "Bangui Windmills",
-        "https://1.bp.blogspot.com/-EK2nobt_-Wo/WUUhA6sf2TI/AAAAAAAAQcA/fBo9cEWlOxg7hGe3QSocZzzI__uzT2apACLcBGAs/s1600/Bangui-1.jpg",
+        "https://i.pinimg.com/originals/a1/33/be/a133be3c62fda81725dc16c236404fbd.jpg",
       ],
       [
         "Malacañang of the North",
-        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/bf/32/9f/malacanang-of-the-north.jpg?w=1000&h=-1&s=1",
+        "https://i.pinimg.com/originals/a3/91/55/a39155312e6bf8ee82110d8563016470.jpg",
       ],
       [
         "Blue Lagoon",
@@ -226,27 +222,27 @@ export const packages: Package[] = [
     sites: [
       [
         "Calle Crisologo",
-        "https://live.staticflickr.com/7589/16747582116_328402d58f_b.jpg",
+        "https://i.pinimg.com/originals/4a/81/82/4a81823a54bd815fd8c7018fa34dc0e0.jpg",
       ],
       [
         "Baluarte",
-        "https://jontotheworld.com/wp-content/uploads/2017/07/baluarte.jpg",
+        "https://i.pinimg.com/736x/e4/0c/2c/e40c2c1a195ad3586219d6f06a7ea4d7.jpg",
       ],
       [
         "Burham Park",
-        "https://mediaim.expedia.com/destination/2/b3b9632c93fcca2237e43669d417b20b.jpg",
+        "https://i.pinimg.com/originals/bd/6a/23/bd6a238a256cedad1e081e3e8f953d23.jpg",
       ],
       [
         "Vigan pottery",
-        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjO8GzNYrlqlG4AI8E-efnJUJbbG3Lq6QCZi_5dbmCy3zGKHFM9gc99cA5K52p6khpzJrnO7-olovuZFo_xF1QOJhu1pK79yTjKPyAQDaMvUopCaR-miJ12cmlzQbYn8nSIHCR61Lt-cSQ/s1600/WP_20161203_15_26_31_Pro__highres.jpg",
+        "https://i.pinimg.com/736x/3b/35/c7/3b35c74e48931c0e503a0265b188c461--vigan-clay-jar.jpg",
       ],
       [
         "Mines View Park",
-        "https://wanderera.com/wp-content/uploads/2022/11/Mines-View-11.jpg",
+        "https://i.pinimg.com/originals/27/07/d8/2707d8d66c0352b5aa967b30047c4d51.jpg",
       ],
       [
         "The Mansion",
-        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/7d/c9/16/zoomed-picture.jpg?w=1000&h=-1&s=1",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Side_of_Syquia_Mansion.jpg/640px-Side_of_Syquia_Mansion.jpg",
       ],
     ],
     thumbnail: viganBaguio,

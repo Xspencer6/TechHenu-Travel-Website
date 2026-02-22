@@ -35,7 +35,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "images.pexels.com",
+        hostname: "centralluzon.politiko.com.ph",
       },
       {
         protocol: "https",
@@ -44,6 +44,10 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "*.pinimg.com",
+      },
+      {
+        protocol: "https",
+        hostname: "chasingculprit.blogspot.com",
       },
     ],
   },
