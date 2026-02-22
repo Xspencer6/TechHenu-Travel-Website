@@ -10,31 +10,43 @@ const nextConfig = {
     unoptimized: true,
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        port: '',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        port: "",
+        pathname: "/**",
       },
       {
-        protocol: 'https',
-        hostname: 'scontent.fmnl17-7.fna.fbcdn.net',
-        port: '',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "scontent.fmnl17-7.fna.fbcdn.net",
+        port: "",
+        pathname: "/**",
       },
       {
-        protocol: 'https',
-        hostname: 'scontent.fmnl17-1.fna.fbcdn.net',
-        port: '',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "scontent.fmnl17-1.fna.fbcdn.net",
+        port: "",
+        pathname: "/**",
       },
       {
-        protocol: 'https',
-        hostname: 'scontent.fmnl17-5.fna.fbcdn.net',
-        port: '',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "scontent.fmnl17-5.fna.fbcdn.net",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "images.pexels.com",
+      },
+      {
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+      },
+      {
+        protocol: "https",
+        hostname: "*.pinimg.com",
       },
     ],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
