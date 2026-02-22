@@ -36,18 +36,26 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "centralluzon.politiko.com.ph",
+        port: "",
+        pathname: "/**",
       },
       {
         protocol: "https",
         hostname: "upload.wikimedia.org",
+        port: "",
+        pathname: "/**",
       },
       {
         protocol: "https",
         hostname: "*.pinimg.com",
+        port: "",
+        pathname: "/**",
       },
       {
         protocol: "https",
         hostname: "chasingculprit.blogspot.com",
+        port: "",
+        pathname: "/**",
       },
     ],
   },
