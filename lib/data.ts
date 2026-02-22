@@ -264,7 +264,7 @@ export const destinations: Destination[] = [
     id: 1,
     name: "Baguio",
     image:
-      "https://i0.wp.com/mybaguiocityguide.com/wp-content/uploads/2023/04/pexels-photo-12914725.jpeg?w=1880&ssl=1",
+      "https://i.pinimg.com/originals/11/06/0a/11060ac72a8f607a36d20ed20a977f34.jpg",
     description:
       "Cool mountain escape known for pine forests, scenic views, and a relaxed city vibe.",
     tourCount: 12,
@@ -273,7 +273,7 @@ export const destinations: Destination[] = [
     id: 2,
     name: "Sagada",
     image:
-      "https://4.bp.blogspot.com/-KBzfbc_Chss/UFwBH2DWdfI/AAAAAAAAKls/F1DXQ51kvy4/s1600/00.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Sagada_Rice_Terraces_2.jpg/640px-Sagada_Rice_Terraces_2.jpg",
     description:
       "Quiet highland town offering misty mountains, ancient traditions, and soulful adventure.",
     tourCount: 8,
@@ -282,7 +282,7 @@ export const destinations: Destination[] = [
     id: 3,
     name: "Ilocos Norte",
     image:
-      "https://1.bp.blogspot.com/-JS24fh5r0mA/UfXTya8FO-I/AAAAAAAAB1w/4-GR9zRlTWg/s1600/san_agustin+church_paoay_ilocos_norte_2-1335602884.jpg",
+      "https://i.pinimg.com/originals/17/c3/ff/17c3ffd049efd7bbfaea929f2bab3736.jpg",
     description:
       "Land of wind-swept coasts, historic landmarks, and dramatic northern landscapes.",
     tourCount: 15,
@@ -290,7 +290,8 @@ export const destinations: Destination[] = [
   {
     id: 4,
     name: "Ilocos Sur",
-    image: "https://farm1.staticflickr.com/331/19084336239_f057417348_b.jpg",
+    image:
+      "https://i.pinimg.com/originals/d9/74/4e/d9744e73199384ad741ffbac6beb8cb9.jpg",
     description:
       "Cultural heartland blending Spanish-era heritage, artisan crafts, and local flavors.",
     tourCount: 10,
@@ -299,7 +300,7 @@ export const destinations: Destination[] = [
     id: 5,
     name: "Baler",
     image:
-      "http://simplyphilippines.net/wp-content/uploads/2014/11/baler-philippines-102.jpg",
+      "https://i.pinimg.com/originals/92/ea/fb/92eafba8700755f288af5ab87a7f77ba.jpg",
     description:
       "Laid-back surf town where golden beaches meet lush mountains and rich history.",
     tourCount: 10,
@@ -308,7 +309,7 @@ export const destinations: Destination[] = [
     id: 6,
     name: "Vigan",
     image:
-      "https://images.squarespace-cdn.com/content/v1/5a87961cbe42d637c54cab93/1552229691786-1M8KURNE27AO4YVQZDRO/vigan-philippines-city-guide%2B%2Bthings-to-do-see",
+      "https://i.pinimg.com/originals/0a/c4/3c/0ac43cb365552c6de3d40e7d4b6feffa.jpg",
     description:
       "Timeless heritage city with cobblestone streets, colonial charm, and living history.",
     tourCount: 6,
