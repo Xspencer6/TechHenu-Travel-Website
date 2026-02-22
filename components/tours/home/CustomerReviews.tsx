@@ -3,82 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-interface Review {
-  id: string;
-  customerName: string;
-  customerImage?: string;
-  rating: number;
-  review: string;
-  location?: string;
-  reviewImage?: string;
-  date: string;
-  reviewUrl?: string;
-}
-
-// Sample data - replace with data from Firestore later
-const reviews: Review[] = [
-  {
-    id: "1",
-    customerName: "Anonymous Client",
-    customerImage:
-      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=100&h=100&fit=crop",
-    rating: 5,
-    review:
-      "Amazing experience! The tour guide was knowledgeable and the destinations were breathtaking. Highly recommend!",
-    location: "Baguio Tour Package",
-    reviewImage:
-      "https://scontent.fmnl17-7.fna.fbcdn.net/v/t39.30808-6/482026314_628382216605364_4781700013255460887_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeGvuzNqPHsbHNoTqmUioQQz5kEKrh0eV9zmQQquHR5X3MKdbWUg_OOm4yf5T8eVVRlzClk-dbT-O3QRIC3kHtxk&_nc_ohc=yyKRVE1W_OEQ7kNvwEU1l_4&_nc_oc=Admy_tJce6IZwa6lr4Y2IooxfdM7ksMLh7bHXC5KHA7ReP3P1B6k6Uxl4DRarimuAcs&_nc_zt=23&_nc_ht=scontent.fmnl17-7.fna&_nc_gid=PAJ857umSlW2PRddyxHseg&oh=00_Aft8_Zi4yfWxdHMqfFjJETh7SM96o4gGbQWc6KEHq2I7lg&oe=699CF62A",
-    date: "2023-09-26",
-    reviewUrl:
-      "https://www.facebook.com/share/p/14UJ7Y8e6e7/", // example URL
-  },
-  {
-    id: "2",
-    customerName: "Anonymous Client",
-    customerImage:
-      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=100&h=100&fit=crop",
-    rating: 5,
-    review:
-      "Best travel experience ever! Everything was well-organized and the accommodations were top-notch.",
-    location: "Ilocos Tour Package",
-    reviewImage:
-      "https://scontent.fmnl17-7.fna.fbcdn.net/v/t39.30808-6/480527928_624004147043171_3768540539245032761_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeGBkfIyTtNPr8nWS2-Xi0W8Teji1Yt9KmlN6OLVi30qaTu4tNxfGpLfwHWf74hVV9xqu07tRnb-xLbaTckLCVqF&_nc_ohc=n8ZrWLva5uoQ7kNvwHeW5qD&_nc_oc=AdmvjBo1OEe7eaEuU_fUyDY4Piqr8_kSn-xPHUC6PPW5l_qXDiW-Qis1LMmHn6BROfw&_nc_zt=23&_nc_ht=scontent.fmnl17-7.fna&_nc_gid=TsyYqZ5DewR6F_pokWE0cw&oh=00_AfsAgzXZJcAuUryIkXVLfcz7rSUzMIufQCJwmfpneuRuRw&oe=699D06FA",
-    date: "2023-09-22",
-    reviewUrl:
-      "https://www.facebook.com/permalink.php?story_fbid=pfbid02eGst11BzoPhSRqEvZGBs6rzBr5w4jPdiJUZMYzFvCkYmZFy9qCzbQgDpmuFR4Rsol&id=100083007744889", // example URL
-  },
-  {
-    id: "3",
-    customerName: "Anonymous Client",
-    customerImage:
-      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=100&h=100&fit=crop",
-    rating: 5,
-    review:
-      "The trip exceeded all expectations! The itinerary was perfect and we saw so many incredible places.",
-    location: "Baguio Tour Package",
-    reviewImage:
-      "https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/478189816_619300600846859_6771092389557776382_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeHweo9V8ZO66Q9a8hW_JTGBLUrK1y2yARItSsrXLbIBEsSsnYqTiyehzHmbX2Ca5MX0eFxdbTsHs5u5n5k-o0k_&_nc_ohc=GIakg8rV9wgQ7kNvwE3GF2y&_nc_oc=Adm7wm7xn6jB6NrIjzX2cg6Bpd3aho7_F7OarWl6ghqv6HD01-zCO8Buho0gZw_6bpA&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=ulW7tAOdc_fvm60t_uAD2g&oh=00_Aft24lK9CS0wOhIW1tCAlKvUFVcDqZNOAkDQxmbYwt-8Rw&oe=699CEA4D",
-    date: "2023-05-29",
-    reviewUrl:
-      "https://www.facebook.com/permalink.php?story_fbid=pfbid0u8L12sSRDMEQPfeW35b6E66pibBqghMrTqq9zaWjXh5ibyaPGwHSBXVJqdjEgUXml&id=100083007744889", // example URL
-  },
-  {
-    id: "4",
-    customerName: "Anonymous Client",
-    customerImage:
-      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=100&h=100&fit=crop",
-    rating: 5,
-    review:
-      "Great service and beautiful destinations. The only minor issue was the weather, but that's beyond anyone's control!",
-    location: "Boracay Tour Package",
-    reviewImage:
-      "https://scontent.fmnl17-5.fna.fbcdn.net/v/t39.30808-6/493223035_24137800262488482_2436139229207833098_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeG_8lhln5-xYBm9jrDUwHwIMvO-h7vtkyAy876Hu-2TIOUJ1t3VZLAKkw6f9X1ZCUu3NJQg2YRD-sYCXpbRvzhs&_nc_ohc=ehwTSRVd7_AQ7kNvwEX46UP&_nc_oc=AdluMfEfLzWBvqKiXRosy6BeUzo8fTyd75jQFtSW-Bl6CPkj1ZaC2m1l1jUbywg6eMw&_nc_zt=23&_nc_ht=scontent.fmnl17-5.fna&_nc_gid=eY32F8pXwYEGdeXLSHZtaQ&oh=00_AfsoTO_pXvkXZBHPNQi7is0aVxygnVoFfhUkHS7rkLTkyQ&oe=699D0A99",
-    date: "2023-03-30",
-    reviewUrl:
-      "https://www.facebook.com/share/p/1AbudKvFTs/", // example URL
-  },
-];
+import { reviews } from "@/lib/data";
 
 export default function CustomerReviews() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -138,7 +63,7 @@ export default function CustomerReviews() {
               delay: 0.375,
             }}
           >
-            What Our Customers Say
+            Shared Memories, Top Ratings
           </motion.h2>
           <motion.p
             className="text-gray-600 text-lg max-w-2xl mx-auto"
@@ -148,7 +73,8 @@ export default function CustomerReviews() {
               delay: 0.4,
             }}
           >
-            Real experiences from travelers who have explored the world with us
+            A look at where our clients have been lately. Thank you for the
+            5-star adventures and for letting us share your world!
           </motion.p>
         </div>
 
@@ -165,7 +91,10 @@ export default function CustomerReviews() {
           {visibleReviews.map((review) => (
             <a
               key={review.id}
-              href={review.reviewUrl || "https://www.facebook.com/profile.php?id=100083007744889"}
+              href={
+                review.reviewUrl ||
+                "https://www.facebook.com/profile.php?id=100083007744889"
+              }
               target="_blank"
               rel="noopener noreferrer"
               className="group block bg-white rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 border border-gray-100"

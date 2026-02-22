@@ -679,3 +679,102 @@ export const vigan_spots = [
       "A short drive from historic sites leads to a calm shoreline with dark sands and sea views — a nice contrast after city explorations.",
   },
 ];
+
+// Customer Reviews
+interface Review {
+  id: number;
+  customerName: string;
+  customerImage?: string;
+  rating: number;
+  review: string;
+  location?: string;
+  reviewImage?: string;
+  date: string;
+  reviewUrl?: string;
+}
+
+// Sample data - replace with data from Firestore later
+export const reviews: Review[] = [
+  {
+    id: 0,
+    customerName: "NJOY Travel and Tours",
+    customerImage:
+      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=100&h=100&fit=crop",
+    rating: 5,
+    review:
+      "Tnk you so much po ninang Ana Gomez Blas and tol Leonilo De Gabriel and family for always trusting us on your tour🤗🤗 Dinadiawan/Baler 3d2n tour👍👍",
+    location: "Dinadiawan/Baler",
+    reviewImage:
+      "https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/494498748_24154049747530200_3669283182094929947_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=7b2446&_nc_ohc=lQCR-FkN6wYQ7kNvwF80ODD&_nc_oc=AdlKObupVpviFLdbvlSXk4CeLCFspdUC1e7AFvUAhkwfp1RBQJF_x9tN3T7_2ZgYn0jHlAqbt1oFEsRxi_y-VBtu&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&_nc_gid=j6PKnAlYWGpAIfzA8npCLA&oh=00_AfsHQz2r0QYVZvVaBYJ3Gu1sHdQFGO_ferMM-6tu-qd04Q&oe=69A0BCA6",
+    date: "2023-05-02",
+    reviewUrl: "https://www.facebook.com/share/p/18UQd8fjK3/", // example URL
+  },
+  {
+    id: 1,
+    customerName: "NJOY Travel and Tours",
+    customerImage:
+      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=100&h=100&fit=crop",
+    rating: 5,
+    review:
+      "Salamat Ama sa Gabay🙏🙏 Thank you Immaculate Minor Seminary for trusting us🤗👍 Thank you po Bossing Fr. Rex Polintan🤗         ",
+    location: "Baguio",
+    reviewImage:
+      "https://scontent.fmnl4-1.fna.fbcdn.net/v/t39.30808-6/503373432_24426125620322610_1394653306207212202_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=7b2446&_nc_ohc=o3lB51ajgSAQ7kNvwEpdQtT&_nc_oc=AdnEH3KTeitqdtqlaKmi8aUcmO88g4_glsTNJ8NnnHY405JGRq64SKoig5iU5tZoZ5Lz4_z01kkPO4RYKAWDv_0V&_nc_zt=23&_nc_ht=scontent.fmnl4-1.fna&_nc_gid=4POpwZag7xdmRTpQq6uVYQ&oh=00_AfuGA0bXhp2XNTS0SLP0s9JJ4Mxu9sHuV0hBXAWQ6Jg7XQ&oe=69A0839F",
+    date: "2023-09-22",
+    reviewUrl: "https://www.facebook.com/share/p/1GKGDSPcpT/", // example URL
+  },
+  {
+    id: 2,
+    customerName: "NJOY Travel and Tours",
+    customerImage:
+      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=100&h=100&fit=crop",
+    rating: 5,
+    review: "Tnk you po maam and DF family🤗",
+    location: "Ilocos",
+    reviewImage:
+      "https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/496797929_24286790517589455_4637107344288567861_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7b2446&_nc_ohc=EkrGJhV7SlcQ7kNvwEq52ol&_nc_oc=AdntJTHHMet32kttW3DfnN5WjwGq_Z9iSlm9_ntzghDDDBf1BwjEBumBMJdf98HEuDY25Jn8RN1szylFn7CqbyjW&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&_nc_gid=ulAl1fbQc7QIPF62NtiVlA&oh=00_Afvp-xX56IAZ5mgtJMs4j6GvjBhKNYY9EnCukxLM2EP8Fg&oe=69A0A253",
+    date: "2023-09-24",
+    reviewUrl: "https://www.facebook.com/share/p/1NDa1Kmaxw/", // example URL
+  },
+  {
+    id: 3,
+    customerName: "NJOY Travel and Tours",
+    customerImage:
+      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=100&h=100&fit=crop",
+    rating: 5,
+    review: "Baguio tour package Sept 24-26 Glory to God🙏🙏aces.",
+    location: "Baguio",
+    reviewImage:
+      "https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/482026314_628382216605364_4781700013255460887_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=7b2446&_nc_ohc=vkitIA7IQ6oQ7kNvwEjBHF4&_nc_oc=AdmDpaqbyKO7B-O5U8xlY2tps77RQjbrRjJ-n0chUrpptSi29nTzZJ0GM3Cw1s_jGKhn_jmEBLcIx6OEGAFC_CDo&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&_nc_gid=7wajWXJEQNxY3I8UapNOJA&oh=00_Aft3O5i01sgDlHs7emQztx7xLgDK7I-8RxsbILW14ouXEQ&oe=69A0B26A",
+    date: "2023-09-27",
+    reviewUrl: "https://www.facebook.com/share/p/18AMyBiuZ1/", // example URL
+  },
+  {
+    id: 4,
+    customerName: "NJOY Travel and Tours",
+    customerImage:
+      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=100&h=100&fit=crop",
+    rating: 5,
+    review:
+      "Baguio tour 2d1n Exclusive tour Tnk you bos kuya Joel and ate konsi Doris And sangunian bayan staff for trusting us🤗 2nd time guest☺️",
+    location: "Baguio",
+    reviewImage:
+      "https://scontent.fmnl4-2.fna.fbcdn.net/v/t39.30808-6/478189816_619300600846859_6771092389557776382_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=7b2446&_nc_ohc=rErhMbDVG5kQ7kNvwH3pE8p&_nc_oc=AdkYIRceae6pZagqUSZrv9u3LB6TDrh2dNcPQfa5yOLpaellhgubqDcA75XVS9ZxaAc5_e7y1tGq_EMMjHYw0Td6&_nc_zt=23&_nc_ht=scontent.fmnl4-2.fna&_nc_gid=9yWgzRBT62gd-XWo4lv0nw&oh=00_AfvtBi_t8xitQW0ksNn3MGH_9jDJAMNAT7n8fH0SsdaA2w&oe=69A0A68D",
+    date: "2023-05-29",
+    reviewUrl: "https://www.facebook.com/share/p/1C3ZSZvLUE/", // example URL
+  },
+  {
+    id: 5,
+    customerName: "NJOY Travel and Tours",
+    customerImage:
+      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=100&h=100&fit=crop",
+    rating: 5,
+    review:
+      "Thank you po maam Marife Mahilum Ebio and Family for trusting our Team🤗☺️",
+    location: "Bolinao",
+    reviewImage:
+      "https://scontent.fmnl4-3.fna.fbcdn.net/v/t39.30808-6/484506336_10082619885099756_4151851301725383317_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_ohc=lKRrvDURzBYQ7kNvwHRmGju&_nc_oc=Adm9eL9pCGhMlT4EdPdk-sdjyORth2y6tD4NKNyk69swjMt9umJ66BGoSVdD4TCg74UC1K35OG8PNw4vy-tm292r&_nc_zt=23&_nc_ht=scontent.fmnl4-3.fna&_nc_gid=O91qpNIb5U0uEVNd8j0YgQ&oh=00_AftGMpuQUMLelKhw-oLVhgHS6umHJwW7JYScjqcCGCjoew&oe=69A09684",
+    date: "2025-03-14",
+    reviewUrl: "https://www.facebook.com/share/p/1DmBrQAkug/", // example URL
+  },
+];

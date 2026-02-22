@@ -1,6 +1,5 @@
 import Header from "@/components/layout/Header";
 import PopularDestinations from "@/components/tours/home/PopularDestinations";
-import TravelHighlights from "@/components/tours/home/TravelHighlights";
 import Footer from "@/components/layout/Footer";
 
 const DestinationsPage = () => {
@@ -8,7 +7,6 @@ const DestinationsPage = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       <PopularDestinations />
-      <TravelHighlights />
       <Footer />
     </div>
   );
